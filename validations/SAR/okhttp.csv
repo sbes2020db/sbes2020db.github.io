@@ -1,0 +1,72 @@
+COMMIT,RELATED ISSUES/PRS,IS SAR?,LOCATION,PHRASE,KEYWORDS,FINAL STATE
+ca62d97a9b27b41965cd65bf6f870ec3b52cd170,3721,YES,Commit --> PR/Issue Body,"""fix tests"", ""simplify"", ""extract isValid method"", ""reformat""","""fix tests""+""simplify""+""extract isValid method"" + ""reformat""",TP
+db0cf007041b242ff320cc3d23c0fec6feb08879,"5109
+2019",YES,Commit --> PR/Issue Body,"""Rename internal file and specify non-Kt-suffixed name""","""Rename"" + ""to take on the maintenance cost"" + ""custom implementation""",TP
+034c9547b9a96c3408107704adfda118e6cd668d,,NO,,,,TN
+78747b646c577d26ad05e8156a9cc34fe0f54b83,,YES,Commit,"""""refactoring from object expression to private inner class","""refactoring""",TP
+7b4b7fecb23a3e18733e150bd0100f7b2bdd5632,,YES,Commit,"""Today we have to suppress 'connectionAcquired' events because we attach the
+constructed connection and then replace it with the pooled one.""","""replace""",TP
+6ef8999916a38fe4454eef61cc3830c8762e2488,5636,YES,Commit,"""otlin bump to 1.3.61 and cleanup""","""cleanup""",TP
+bcfa004b6a32c15fb66b65397e17675ff0b838c3,5723,YES,Commit,"""Reduce platform logging for each test""","""Reduce""",FN
+17fc242fb93b3a8fd80a6a5c7c3f80bc1a0ee578,,NO,,,,TN
+03fcdb8607a852805e1ce835535ad828f328ac2b,,NO,,,,TN
+f40e21a956dd7fd215918a3742ce46d5c58675ee,5334,YES,Commit --> PR/Issue Body,"""Allow interrupt of singleton cleanup thread"", ""inline"", ""Cleanup connections on interrupt"", ""Remove println"", ""If container aggressively interrupts the RealConnectionPool cleanup thread,""","""cleanup""+""inline""+""remove""",TP
+29267ac4e8eae099064483dc4c4b246690a92009,3475,YES,Commit --> PR/Issue Body,"""rename connectionFound"", ""cleanup"", ""address comment on body calls"", ","""rename"", ""cleanup"", ""address comment"", ",TP
+b9d30d67ac820fbc2b22fd9789da6dc49e0413d5,,YES,Commit ,"""Samples cleanup""","""cleanup""",TP
+27c6e69c82a8252aed664b4ae6e09e5627778586,,YES,Commit,"""They can be used to rewrite the response
+headers and body from what the server actually returned to what the client wants.""","""rewrite""",TP
+bdbe2dad8806a77bf018b87f4518df250fa67f89,4089,YES,Commit ,"""simplify TLSv1.2 vs TLS selection logic"", ""cleanup""","""simplify"", ""cleanup""",TP
+504b9cf55afd9d642e2a5323e18f79db607ad1a9,,YES,Commit,"""The HTTP transport class is a dumb adapter that adapts the
+protocol-specific decisions"", ""This should make it possible to make significant simplifications
+to how connection recycling works""","""adapt"", ""simplifications""",TP
+9d28d9c9e2078dd598777980b5eff46355b6df72,,NO,,,,FP
+7c4c8c724dd8e05c4907c46309d0290dc44764fb,,NO,,,,TN
+36a408b6d60a0178f9760e2054e4ade405a79a20,5736,NO,,,,TN
+295625d3542f203fc160c612e5373aedb86482ad,,YES,Commit,"""Kotlin refactor *Platform""","""refactor""",TP
+46ec605734bacc90552643f7bba1b8b6ae09ee0f,,YES,Commit,"""This is a mechanical refactoring that changes all code that directly
+accesses a StreamAllocation to instead access a Transmitter. ""","""refactoring""",TP
+a692bd663bce6bab52b9e6e03bf3a3bee7c5a266,5741,YES,Commit --> PR/Issue Body,"""Two test fixes when running with bouncycastle"", ""Fixes for bouncycastle tests""","""fix tests""",FN
+2f4053f494d0f2ad6a3e9945bba76a124c62b9d7,5728,No,,,,TN
+2594c6c695f2898bba947ea86a7aaac8dcfd4dc4,4603,Yes,Commit,I'm working towards reducing the role StreamAllocation plays,reducing,TP
+f68f559490003cf4e1587d829d302f89b47a851d,5481,Yes,"Commit, PR Title",Minor Platform cleanup ,cleanup,TP
+9a1da9b4209955072d97caeb9cbcdeefb02841eb,,No,,,,FP
+cc9e126c0fcaa541078a0527382733c2b73f29bb,5729,Yes,PR/Issue Comment,typo: HTTP/1.1?,typo,FN
+24c7d54ecb51a09ee94e97fe34df0cfc942f52fd,5297,No,,,,FP
+ca37ac991a3a40c1bea73319c93fe74f3e2a68be,4603,Yes,Commit,This changes failure recovery,changes failures,TP
+561613d57990912d3d8ddf7a4b6974a5d26c431c,,Yes,Commit,Also do some test cleanup,cleanup,TP
+f5099ce11f9b9df4eaf2000b80343868f1799176,,Yes,Commit,Cleanup refactoring,cleanup refactoring,TP
+fa83afec25ff613341731e1552fe9897d755b338,2993,Yes,Commit,This refactors much of RealWebSocketTest to make it more natural,refactors,TP
+593cfeb392f322bbb1033743ddc2ea39134e1e22,5735,No,,,,TN
+0f5c5c6431cfe7e5227d90fc08e822cd3b2cec9f,,Yes,Commit,still a lot of refactoring and cleanup possible,"refactoring, cleanup",TP
+82f773376e19bb7e10916627349fad06e45f90cb,,No,,,,TN
+d60d8e143a337b48f2e9a7373cb2a9e539423b19,,Yes,Commit,continue to migrate code,migrate code,TP
+4262a05f8e858ac9c39599b2e1dfc53c03020cd2,,No,,,,FP
+0b6c0d25d078f6f0339d2050555888bcc3d9a2f4,5640,Yes,"Commit, PR/Issue Title",cleanup of two modules,cleanup,TP
+a68b83756bda246586ad03cc190e7a3df205495d,5733,Yes,Commit,,cleanup,FN
+bf4c70a0bcbeed5f88d915e88bbbc562d499b4e3,5737,Yes,Commit,fix typo,fix typo,FN
+adb609f7f305f7ae01d877255ee70789f71feb1e,4609,Yes,Commit,Initial refactoring towards a Transmitter abstraction,refactoring,TP
+acf11df49679a8c2e07c0c2b85e847ff0baa1da2,,No,,,,TN
+e74e3f3bf744ef7f4d8ee724a7cf2347e486cfab,,Yes,Commit,Move cache writing out of the transpor,out of,TP
+f2f4df9745d70fe1a75fa2fcb62494be9070ed36,,NO,,,,TN
+137e7de0454f10160370f105ac7d9d2fc5403c84,,YES,Commit,Also rename HeldCertificate.Builder.issuedBy() to signedBy(). 'Issued' is the word used by certificates; 'signed' is the word used by cryptographers.,rename,TP
+9316a4fbccb86951baa560bd103552894b7a9a55,5734,YES,Commit --> PR/Issue Title,Handle conscrypt cert names,,FN
+b52b3c78ebfc185fee0d281228a643a371af165c,3532,YES,Commit,reformat,reformat,TP
+7c94c808de0e946180fbcfa187aacd8fca83c489,,YES,Commit,"renamed methods to follow JUnit 4 style; moved some assertions from regularCases() into emptyValues()
+   and trailingWhitespace() where those seemed like a better fit; removed additional dead sections.","renamed, moved, ""removed""+""dead""+""sections""",TP
+98a67d1d1d0dbd811c30b501ffea8a02ac9df850,4745,YES,Commit,HttpUrl in Kotlin renames,rename,TP
+97aa9f54250045fdc2aa884598f85b8e24172d9f,5747,NO,,,,TN
+c912b90b8a0f735eaf057b2f623cc2cda5251fab,4690,YES,Commit --> PR/Issue Title,Rename OkHttpClientTestingRule to OkHttpClientTestRule,rename,TP
+3d43a8dba89ccd7333c3ebcf74928e441790d943,,YES,Commit,Rename FramedConnection to Http2Connection; Also rename HttpStream to HttpCodec,rename,TP
+92a5b6b2129ce9f42c57922b67cc2346a827e468,5459,YES,Commit --> PR/Issue Title,Rename ExchangeCode.kt file,rename,TP
+8864c5d687df432021a4409aad4e0448ed030c5a,3103,NO,,,,FP
+3f305a6859af29d9a9b052d702d96490cff169fc,,NO,,,,TN
+a0b26361d48fc88c853bc717df3adfe8ead77711,,NO,,,,TN
+f2d815ca153c07e99524524ba07b383acb5d717e,4749,YES,Commit --> PR/Issue Title,Kotlin Platform refactor,refactor,TP
+9a6b84319e6ae8dff2f6af67d1083fe7b3050e5c,4603,YES,Commit,"Initial refactoring towards a Transmitter abstraction; moves all calls into StreamAllocation, RealConnection, and
+HttpCodec into a new Transmitter type",refactoring,TP
+f24f4130acbe91cdc23a35df62e5fd5bf62aca54,4359,NO,,,,FP
+f2461183e8a70bae2362a5237772844a48e16100,,YES,Commit,Refactor towards an OkHttpClient.Builder.,refactor,TP
+51ca7c55da6fac733eb08a613c1c614ad2e66b5f,3476,YES,Commit,cleanup; move response body events to codec,"cleanup, move",TP
+5bfc8f661327de18cf141998bb87ba90aa6dd9b7,5720,NO,,,,TN
+96b5f0c93d97af0c10c654f74d66a63979d3e3e1,5742,NO,,,,TN
+76b7d585e03b78725f8a276714b233a14cd9c217,3504,YES,Commit,refactor test,refactor,TP
