@@ -22,6 +22,72 @@ title: On the Relation between Complexity, Explicitness, Effectiveness of Refact
 | Instance Variables | Size | The amount of instance variables in a class. |
 | Instance Methods | Size | The amount of instance methods in a class. |
 
-## List of Refactorings detected by the version of RefMiner used in this work:
+## List of Refactorings used in this work:
 
-Extract Method; Inline Method; Rename Method; Move Method; Move Attribute; Pull Up Method; Pull Up Attribute; Push Down Method; Push Down Attribute; Extract Superclass; Extract Interface; Move Class; Rename Class; Extract and Move Method; Change Package (Move, Rename, Split, Merge); Move and Rename Class; Extract Class; Extract Subclass; Extract Variable; Inline Variable; Parameterize Variable; Rename Variable; Rename Parameter; Rename Attribute; Move and Rename Attribute; Replace Variable with Attribute; Replace Attribute (with Attribute); Merge Variable; Merge Parameter; Merge Attribute; Split Variable; Split Parameter; Split Attribute; Change Variable Type; Change Parameter Type; Change Return Type; Change Attribute Type; Extract Attribute; Move and Rename Method; Move and Inline Method; Add Method Annotation; Remove Method Annotation; Modify Method Annotation; Add Attribute Annotation; Remove Attribute Annotation; Modify Attribute Annotation; Add Class Annotation; Remove Class Annotation; Modify Class Annotation; Add Parameter; Remove Parameter; Reorder Parameter
+| | | | |
+|---------|---------|---------|---------|
+| Extract Method | Inline Method | Rename Method | Move Method |
+| Move Attribute | Pull Up Method | Pull Up Attribute | Push Down Method |
+| Push Down Attribute | Extract Superclass | Extract Interface | Move Class |
+| Rename Class | Extract and Move Method | Change Package (Move, Rename, Split, Merge) | Move and Rename Class |  
+| Extract Class | Extract Subclass | Extract Variable | Inline Variable |
+| Parameterize Variable | Rename Variable | Rename Parameter | Rename Attribute |
+| Move and Rename Attribute | Replace Variable with Attribute | Replace Attribute (with Attribute) | Merge Variable |
+| Merge Parameter | Merge Attribute | Split Variable | Split Parameter |
+| Split Attribute | Change Variable Type | Change Parameter Type | Change Return Type |
+| Change Attribute Type | Extract Attribute | Move and Rename Method | Move and Inline Method |
+| Add Method Annotation | Remove Method Annotation | Modify Method Annotation | Add Attribute Annotation |
+| Remove Attribute Annotation | Modify Attribute Annotation | Add Class Annotation | Remove Class Annotation | 
+| Modify Class Annotation | Add Parameter | Remove Parameter | Reorder Parameter |
+
+## List of SAR Keywords and Phrases
+### (\*) indicates that any character can follow (e.g., refactor*: refactoring, refactored)
+
+| | | | |
+|---------|---------|---------|---------|
+| "refactor*" | "renam*" | "cleanup*" | "reorganiz*" |
+| "simplif*" | "restructur*" | "encapsulat*" | "rewrit*" |
+| "inlin*" | "reformat*" | "decompos*" | "change design" |
+| "code optimization" |  "optimize the code" |  "polishing code" |  "replace it with" |
+| "coupling" | "cohesion" | "reduce complexity" | |
+
+## List of NFR Keywords
+
+### Maintainability
+
+| | | | |
+|---------|---------|---------|---------|
+| "maintainability" | "maintenance" | "reliability" | "serviceability" |
+| "accordance" | "measures" | "requirements" | "index" |
+| "update" | "release" | "production" | "addition" |
+| "budget" | "integration" | "operation" | |
+
+### Performance
+
+| | | | |
+|---------|---------|---------|---------|
+| "performance" | "rate" | "bandwidth" | "cpu" |
+| "time" | "latency" | "throughput" | "channel" |
+| "instruction" | "response" | "process" | "communication" |
+| "space" | "memory" | "storage" | "peak" |
+| "compress" | "uncompress" | "runtime" | "perform" |
+| "execute" | "dynamic" | "offset" | "reduce" |
+| "response" | "longer" | "fast" | "slow" |
+| "maximum" | | |
+
+### Robustness
+
+| | | | |
+|---------|---------|---------|---------|
+| "robust" | "robustness" | "inputs" | "error" |
+| "failure" | "network" | "error" | "reliability" |
+| "serviceability" | "fault" | "tolerance" | "exception" |
+
+### Security
+
+| | | | |
+|---------|---------|---------|---------|
+| "access" | "author" | "ensure" | "data" |
+| "authentication" | "security" | "secure" | "malicious" |
+| "prevent" | "incorrect" | "harmful" | "state" |
+| "exception" | | |
