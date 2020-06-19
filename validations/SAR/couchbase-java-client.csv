@@ -1,4 +1,4 @@
-COMMIT,IS SAR?,PHRASE,KEYWORDS,SAR
+COMMIT,IS SAR?,PHRASE,KEYWORDS,FINAL STATE
 175fadce1c20f13fc74be011416e3e67092a9259,YES,the actual java implementation also got simplified and streamlined.,"""simplified"", ""streamlined""",TP
 b8293ae1e0c2e7b083942bfdb0e5c6601bc5ed2a,YES,The replica read code has been refactored into its own class for clarity and better future testability.,"""refactored"", ""clarity""",TP
 410ba1ba7c43988476ef27956625ffacad55ff09,NO,N/A,N/A,TN
