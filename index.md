@@ -2,4 +2,26 @@
 title: On the Relation between Complexity, Explicitness, Effectiveness of Refactorings and Non-Functional Concerns
 ---
 
-Under Construction
+## Used Internal Quality Attribute Metrics
+
+| Metric Name | Internal Quality Attribute | Metric Description |
+|-------------|----------------------------|--------------------|
+| Cyclomatic Complexity | Complexity | The amount of decision points (e.g., for, while) in a method. |
+| Average Cyclomatic Complexity | Complexity | The average of the Cyclomatic Complexity of all methods in a class. |
+| Sum Cyclomatic Complexity | Complexity | The sum of the Cyclomatic Complexity of all methods in a class. |
+| Max. Cyclomatic Complexity | Complexity | The maximum value for Cyclomatic Complexity in all methods in a class. |
+| Max. Nesting | Complexity | The highest amount of nested decision points in a class or method. |
+| Lack of Cohesion in Methods | Cohesion | 1 minus the average percentage of usage of instance variables in instance methods in a class. |
+| Average FANOUT | Cohesion | The average FANOUT of all methods in a class. |
+| Average Coupling | Cohesion | The average amount of external classes accessed by methods in a class. |
+| Coupling Between Objects (CBO) | Coupling | The amount of classes coupled to the current class. |
+| FANOUT | Coupling | The number of external variables and functions used by a method. |
+| FANIN | Coupling | The number of paramters read by a method, plus the amount of unique methods calling the current method. |
+| Lines of Code (LOC) | Size | The number of lines of code in a given class or method. |
+| Number of Statements | Size | The amount of statements, regardless of lines, in a given class or method. |
+| Instance Variables | Size | The amount of instance variables in a class. |
+| Instance Methods | Size | The amount of instance methods in a class. |
+
+## List of Refactorings detected by the version of RefMiner used in this work:
+
+Extract Method; Inline Method; Rename Method; Move Method; Move Attribute; Pull Up Method; Pull Up Attribute; Push Down Method; Push Down Attribute; Extract Superclass; Extract Interface; Move Class; Rename Class; Extract and Move Method; Change Package (Move, Rename, Split, Merge); Move and Rename Class; Extract Class; Extract Subclass; Extract Variable; Inline Variable; Parameterize Variable; Rename Variable; Rename Parameter; Rename Attribute; Move and Rename Attribute; Replace Variable with Attribute; Replace Attribute (with Attribute); Merge Variable; Merge Parameter; Merge Attribute; Split Variable; Split Parameter; Split Attribute; Change Variable Type; Change Parameter Type; Change Return Type; Change Attribute Type; Extract Attribute; Move and Rename Method; Move and Inline Method; Add Method Annotation; Remove Method Annotation; Modify Method Annotation; Add Attribute Annotation; Remove Attribute Annotation; Modify Attribute Annotation; Add Class Annotation; Remove Class Annotation; Modify Class Annotation; Add Parameter; Remove Parameter; Reorder Parameter
