@@ -1,0 +1,143 @@
+COMMIT_HASH,HAS_NFR,PHRASE,NFR,KEYWORDS
+b9d2926df44a47116d2b0f56a16fc1b39e466dc2,YES,"""Fix error occurring when SecurityManager is enabled""","Robustness, Security (INDIRECT)","""error"""
+a7338dd1e5173b081d0ec1a7f31f48ed34b07d70,YES,"""We can't add this method to the super class StoredConfig since that
+abstracts from filesystem storage. MockSystemReader.MockConfig is a
+StoredConfig and is also used by tests for dfs based storage. Hence
+remove this leaky abstraction.
+
+This implies we always use the fallback FileStoreAttributes which means
+a config file modification is considered racy within the first 2
+seconds. This should not be an issue since typically configs change
+rarely and re-reading a config within the racy period is relatively
+cheap since configs are small.""","Performance, Robustness","""leaky"", ""racy"", ""cheap"""
+d3021788d25d9a6f88006238c7399c78314da2fb,YES,"This commit has been written to avoid performance regressions as much
+as possible. In the usual (and currently working) case where the only
+unadvertized things requested are commits, we do a standard RevWalk in
+order to avoid incurring the cost of loading bitmaps. However, if
+unadvertized non-commits are requested, bitmaps are used instead, and
+if there are no bitmaps, a WantNotValidException is thrown (as is
+currently done).","Performance, Robustness(INDIRECT)","""cost"", ""performance"" + ""regression"""
+fdcd4f9a3444c442a13bee8f041e31be12256464,YES,"The set of supported settings is still the same; JGit currently
+supports only followRedirects, postBuffer, and sslVerify, plus the
+JGit-specific maxRedirects key.
+
+Add tests for path normalization and prefix matching only on segment
+separators, and use the new mechanism in SmartClientSmartServerSslTest
+to disable sslVerify selectively for only the test server URLs.",Security,"""ssl"""
+83ad74b6b9b6cace3419560a72cec028cfd18550,YES,ISSUE BODY TOO LARGE,Security,"""attack"", ""security"", ""safety"""
+08480c948c47b905ace6ecec43ae0c92a218d1d6,YES,[infer] Fix ObjectWalk leak in PackWriter.preparePack(),"Performance, Robustness","""leak"""
+5706c8e38e501bb1f9721167ca6cbcc169df8b10,YES,Allow saving push certs on a subset of refs,Security,"""certs"""
+a85e817dc29a1d6a96beeb92383aa265b0303415,YES,Rewrite push certificate parsing,Security,"""certificates"""
+42d7565ba9b97effdee3f737e32541b26b7341ab,YES,"DirCacheCheckout and CanonicalTreeParser cooperate. CanonicalTreeParser
+can detect malformed, potentially malicious tree entries and sets a
+flag, while DirCacheCheckout refuses to work with such paths.",Security,"""malicious"""
+7c58f6282a53754822b00ae821d99262c43c86a9,YES,"Previously, the Dfs GC excluded objects from packs by passing a
+previously written index to the PackWriter. Reading back a file on
+Dfs is slow. Instead, allow the PackWriter to expose the objects
+included in a pack and forward that to invocations of excludeObjects() .",Performance,"""slow"""
+1ca7c581a326dab9418d3d3eb665e1f27f6ca8ed,YES,"Additionally expose methods to find the first footer line and to find
+the position of the ChangeId footer in the commit message in order to
+enable reuse of these methods introduced for the fix.
+",Maintainability,"""reuse"""
+e63f1c94f8f9a5b10da6c1e5932da33eb805230a,YES,"None of these should have been exposed to base classes. The majority
+of them are private implementation details that are not required by a
+subclass in order to interact with the base protocol definition. The
+few that are needed should be visible as accessor methods, so the
+internals can be modified without breaking the public JGit API.
+","Maintainability, Security","""exposed"", ""private"""
+16b8ebf2d1d099ac355767b1b1853ae7bf8854f1,YES,"Add an object encapsulating the state of a PackWriter
+
+Exposes essentially the same state machine to the programmer as is
+exposed to the client via a ProgressMonitor, using a wrapper around
+beginTask()/endTask().","Maintainability, Security (INDIRECT)","""encapsulating"""
+01b5392cdbc12ce2e21fd1d1afbd61fdf97e1c38,YES,ISSUE BODY TOO LARGE,"Performance, Maintainability, Robustness","""cache"", ""concurrent"", ""error"", ""programming"" + ""error"", "
+515deaf7e503738b4c53c3c2dfd6d7acab3bef18,YES,"Because the ObjectReader is likely to hold onto a native resource
+like an Inflater, we don't want to leak them outside of their
+useful scope.
+
+This permits
+the ObjectReader to actually do some caching if it felt inclined
+to do so.",Performance,"""caching"", ""leak"""
+7ff18f3ec9f28609605dc5cca875cca2401b0ce5,YES,"Make StoredConfig an abstraction above FileBasedConfig
+
+This exposes a load and save method, allowing a Repository to denote
+that it has a persistent configuration of some kind which can be
+accessed by the application, without needing to know exact details
+of how its stored .",Maintainability,"""abstraction"""
+19126f70e9e5645278b38239c01d990c32d44af2,YES,"This change adds additional methods in ReceivePack that will allow a
+server to check the above conditions, in order to ensure that a user
+is not trying to create a reference that they cannot see, or that a
+malicious user isn't attempting to forge the SHA-1 of an object that
+they cannot see in order to base a change off of it.",Security,"""malicious"""
+9108035763f7d9504671bc9bbddfb467100095e7,YES,Refactor the cached Authenticator data out of AwtAuthenticator,Security,"""authenticator"""
+cc000f93a84b22e692a9c234486978703fdb8f30,YES,Factor out a JSch-independent ssh config parser,Security,"""ssh"", ""keys"""
+07f98a8b71ea961854ae061ffe6ae1ba2458254f,YES,"By making this a deterministic function, DfsBlockCache can stop
+retaining a map of every DfsPackDescription it has ever seen.  This
+fixes a long standing memory leak in DfsBlockCache.
+
+This refactoring also simplifies the idea of setting up more
+lightweight objects around streams.","Performance (DIRECT), Robustness (INDIRECT)","""memory"" + ""leak"""
+ffa237e7dbd56df2f28d45113fe0ea03337900f1,YES,"JGit failed to do checkouts when the index contained smudged entries and
+autocrlf was on. In such cases the WorkingTreeIterator calculated the
+SHA1 sometimes on content which was not correctly filtered. The SHA1 was
+computed on content which two times went through a lf->crlf conversion.",Robustness,"""failed"""
+95e8264cc8d2689cec10b58fbf15149856000df4,NO,,,
+16760c3e9a242f21538c2f4da1aad96953cafc37,YES,"In order to avoid stack overflow use the fallback filesystem timestamp
+resolution when loading FileBasedConfig which creates itself a
+FileSnapshot to help checking if the config changed.",Robustness,"""stack"" + ""overflow"""
+91101414ae1378cd6a0a6d2673e0e66f4a858828,NO,,,
+7aaeb6489f9819227fa8ebe122a849b6029242b7,YES,"Introduce a new KeyPasswordProvider interface so that we don't have
+to depend on the upstream FilePasswordProvider in our API. (We do
+need _some_ abstraction for getting passwords for encrypted keys in
+the API; EGit will need to provide its own implementation.)",Security,"""KeyPasswordProvider """
+c56fa51709278f2be4e155ae5fbad270188cbe64,YES,Apache MINA sshd: use NumberOfPasswordPrompts for encrypted keys,Security,"""encrypted"", ""keys"""
+78db9bd17545186a6cb320f5846069d5ece7baba,YES,Use a secure random generator to seed nonce for digest authentication,Security,"""secure"", ""authentication"""
+adc73c4ba1c5a0ddfaee9537df438bfa14f38a62,NO,,,
+95fc2b210f3df3a1ff5c729dbc0624e3d25d34bd,YES,Don't subclass ThreadLocal to avoid memory leak in NLS,"Performance (DIRECT), Robustness (INDIRECT)","""memory"" + ""leak"""
+f527d4548f41436e6e77cd54134f25e1b89ba903,YES,"The InitCommand returns a Git that is instantiated with the newly
+created Repository, but the Repository is not closed with the Git
+resulting in resource leaks.",Performance,"""resource"" + ""leak"""
+1a7b8a11dff95e451e2ba59ee60f224b9c13f9a8,NO,,,
+7ac1bfc834fe65b7e86e8f54f1f5025df90f8a92,YES,Do authentication re-tries on HTTP POST,Security,"""authentication"""
+cee9d444e97858d441b5de0f4c357bccbe4952f2,YES,Delegate crypto algorithm creation to InsecureCipherFactory,Security,"""crypto"""
+0f25f64d4882f7853c9d3dc84ec382d8a78ae646,YES,"Since MessageDigest has higher throughput, continue using
+MessageDigest for computing pack, idx and DirCache trailers.
+These are less likely to be sensitive to SHAttered[2] types
+of attacks, as Git uses them to detect random bit flips
+during transfer, and not for content identity.",Security,"""attacks"", ""safety"""
+1fb2319c188d68412c40189d298e51f62c899944,YES,Fix resource leak in IndexDiff,Performance,"""resource"" + ""leak"""
+dea47b9363f49b6b19964ef226f5de76da04f5e8,YES,"Now that RepositoryCache have a time based eviction strategy, get rid
+of the strategy to evict cache entries if heap memory is running low,
+i.e. soft references. Main reason why time based eviction was
+implemented was to offer an alternative to the unpredictable soft
+references.
+
+Relying on soft references is not working, especially in large heap. The
+JVM GC will consider collecting soft references as last resort before
+throwing an out of memory error. For example, an application like Gerrit
+configured with a 128GB heap, GC will wait until all 128GB is filled
+before collecting the soft references so the application will be
+suffering long pauses caused by GC for a long time already. In other
+words, you will have to restart application because it's unusable before
+JVM eviction kicks in.
+
+Keeping the SoftReference in RepositoryCache is causing more harm than
+good. If you use the time based eviction (which is the default strategy)
+and want to tune JVM to release soft references more aggressively, it
+will release repositories from the cache even though they are not
+expired which defeats the purpose of the repository cache.
+
+Gerrit uses Lucene library which uses soft references and this is
+causing a ""memory leak"" except if you configure JVM to release soft
+references more aggressively which have the nasty side effect of
+evicting non expired repositories from the cache.","Performance, Robustness","""memory"" + ""leak"", ""cache"", ""pauses"""
+3100662a5acb0f7c21035c69841df0e645c62466,YES,"This allows the same try/catch to handle parsing the command list,
+push certificate and push options. Any errors will be caught and
+handled by the same catch block, as the client is in the same state.
+",Security,"""certificate"""
+683bd09092e90aef5b7cf963355995d76aefa439,YES,"Make this clearer by making CompressedBitmap a static class and
+replacing the 'this' reference by an explicit field.
+",Maintainability,"""clearer"""
+1227165e27c589a5002840b5fd88f0bfc8a6433b,NO,,,
+d385a7a5e5cacd875da4301ddeb46a7c56a725fa,NO,,,
+320a4142ad0e8febf4696446cc3a6346c0708a00,NO,,,
