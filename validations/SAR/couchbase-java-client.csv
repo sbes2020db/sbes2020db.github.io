@@ -1,0 +1,62 @@
+COMMIT,IS SAR?,PHRASE,KEYWORDS,SAR
+175fadce1c20f13fc74be011416e3e67092a9259,YES,the actual java implementation also got simplified and streamlined.,"""simplified"", ""streamlined""",TP
+b8293ae1e0c2e7b083942bfdb0e5c6601bc5ed2a,YES,The replica read code has been refactored into its own class for clarity and better future testability.,"""refactored"", ""clarity""",TP
+410ba1ba7c43988476ef27956625ffacad55ff09,NO,N/A,N/A,TN
+bbe3f51d3b06e376e5489dc5574a76741d4e6efb,YES,The common metadata has been extracted into property and entity metadata with clearer interfaces.,"""extracted"", ""clearer interfaces""",TP
+5c8037e704d56d1d7594d8a210b8d89e5c014749,NO,N/A,N/A,FP
+590a16823ae46a0bad3f4f4bdb6f3319e76aefe7,NO,N/A,N/A,TN
+69a2e25d568cff94d262586a51b9a5df14d10a97,YES,Refactor SearchParams into SearchQuery,"""refactor""",TP
+c7124eb95c4fe5f8673c4eb67101568cf48df788,NO,N/A,N/A,FP
+4f8836da3e0a271ffc601bcba19844f5349effce,NO,N/A,N/A,TN
+36ebb9042d43f7262209b99197a65ce8796568b1,YES,Prefix all Query-related classes with N1ql ,"""prefix""",TP
+97a0a5dd0a069dacdef445948d058623776690ca,NO,N/A,N/A,FP
+f86639e3a116e8142ef7774e5efb3cb6c075e6da,NO,N/A,N/A,TN
+77d8bb9f161f79e91a9723fcda11c6ed73d1b577,YES,The tests have been refactored out to a new file for better encapsulation.,"""refactor""",TP
+fe9e30b43f8b02d10aaea0614d424e2a6a622ed1,YES,"Other than refactoring the code it has been changed to perform
+timeouts through the timeout() operator","""refactoring""",TP
+949bef0f8b0f45777055c9dfe8523da1e63f4632,NO,N/A,N/A,TN
+1f9dd2e2de6b41ed13619dd9b79c4f7f6444d8f5,YES,This changeset performs non-behaviour-changing cleanup,"""non-behaviour-changing"", ""cleanup""",TP
+ed15332b5bd07f2890004a4d7bf7c8763603d1b6,YES,Element Builder cleanup and test fixes.,"""cleanup""",TP
+cb9380c4d3ca86b88eb3542e463c9c1ffcca313e,NO,N/A,N/A,TN
+725a716dc5cc362f67aa376bb539bd03f217d37c,YES,Renamed createNamedPrimaryIndex methods to createPrimaryIndex (overload) and dropNamedPrimaryIndex to dropPrimaryIndex.,"""renamed"" + ""to""",TP
+39b41060418c8b52eff0bc59fc2c5cc5d9f4350b,NO,N/A,N/A,FP
+18599a39ce590fe6f43fdb3bff08b8f2b46ed213,NO,N/A,N/A,TN
+9f97504351723fbbd0188b246115eed5bf37891d,YES,Rename createParents to createPath,"""rename"" + ""to""",TP
+7347b7a87591265372aadf9148c8a63ca44a8ed7,YES,"In order to not expose lots of core-io internals, a helper class is introduced which encapsulates the functionality.","""helper class"", ""encapsulate""",TP
+9edc469653afd3d53016cfee70ae5fb841fe1e39,NO,N/A,N/A,TN
+c9b60799fc49fd691eefbf9bd7b6b5663c884787,NO,N/A,N/A,FP
+ac9d32fcc5b336685749fd4b1c8c2bfb32f174c1,YES,the code has been refactored slightly,"""refactored""",TP
+daa21c8e89e4895e0c76dfdf5c03265107f075a8,NO,N/A,N/A,TN
+ca7f58043b87199679fab4cf5a6cb5e9f446b2cd,YES,The code has been refactored so that both ID- and Document-based durability requirements now use a common helper method,"""refactored"", ""helper method""",TP
+86029f1e901dad459eeced0c03bae79584080c4f,YES,refactors naming and API towards diagnostics (away from health check),"""refactoring""",TP
+183d93f52b26b2792acad3c48acff14c8daf0bba,NO,N/A,N/A,TN
+696564efe346897080ac299c75888cc05792f73b,YES,cleanup for first dp.,"""cleanup""",TP
+f13fc22772482875baa727005c494c304fc5a921,YES,"In addition to the refactored diagnostics command
+This changeset simply exposes the methods with their overloads on the Bucket and AsyncBucket and forwards it to the HealthPinger.","""refactored"", ""exposes"" + ""methods""",TP
+bd67bb593556cc50d33f730b5fa7dfb29e6e877e,NO,N/A,N/A,TN
+62aadf9ad755632151f2451b0002c020b380ccc0,YES,"The signature for the doOnRetry, a specialized Func4, can be simplified using the RetryBuilder.OnRetryAction interface.","""simplified"" + ""interface""",TP
+76fa01c707a9f7ca7c31efa0f4d2433d6a8b742b,YES,Renaming javadocs to javadoc for standard compl. ,"""renaming""",TP
+5fabec4b7713bc162deabc494386f3d00adda8ff,NO,N/A,N/A,TN
+abf39bf460424afcc5993979bac41874975c7759,NO,N/A,N/A,FP
+cd2a5d1b6e23ffebf5a9ccab8c9d6d935a707ba7,YES,LookupResult is now renamed MultiResult<Lookup>. Adaptation to refactor pending java-client side API rework,"""renamed"", ""refactor""",TP
+429a1d84016cde47a0cdf3060560f5a0fa872112,NO,N/A,N/A,TN
+79735698cdf3535789b32c09409cbbb9b40b6ca0,YES,Improve readability of code related to that in TranscoderUtils to make the spec more visible and the different parts more explicit.,"""improve readability""",TP
+990e41c05b760f102ec4c0b750775379ee176b73,YES,"Classes have been copied and renamed, the bucket API has been expanded accordingly.","""renamed""",TP
+4b5d097eb620147088f19e521f65b3032911b4cf,NO,N/A,N/A,TN
+23526b8839fc39b1b98c052a03ba749501de20c1,YES,Rename PasswordAuthenticator to ClassicAuthenticator,"""rename"" + ""to""",TP
+ff33d7dbbe8cee706efa1a41a12cfade05a49f47,YES,The subscriber has been refactored out of the helper method since volatiles are not allowed inside a method.,"""refactored""",TP
+eb4ae31ad6c29f76fcb9ade61a5ff472c34aa065,NO,N/A,N/A,TN
+0fe6187fac30014b97ae475b8b6339133bc2fe64,YES,This changeset refactors remove to include support for tracing and spans.,"""refactors""",TP
+6be5a7348f6eb01bcdb475c7057a6c4d05d5a194,NO,N/A,N/A,FP
+d8a9aea45801223fbaa9cb9387b88e4045c12293,NO,N/A,N/A,TN
+32fb5cd0f0133609f77428c2af6ac9281beebbae,NO,N/A,N/A,FP
+3663b5e58115fa4926cbcee9519ca57b663d054b,NO,N/A,N/A,FP
+7f60313a3984abc29ffa36a8eaff0d03934ca9e9,NO,N/A,N/A,TN
+db6f66917e7b837e4ca36983b5e6fcc1d0985c88,YES,This changeset renames the getDesignDocument and async* to just getDesignDoc.,"""renames"" + ""to""",TP
+838a200111c744f09d2d6db0ed3e06a47bc5834c,NO,N/A,N/A,TN
+6953408ddc5f5c67aab453f4a986bd610bbc1edf,YES,This changeset refactors the observePoll method,"""refactors""",TP
+05b4a871fa18b8a06c31aa739174efd542f5505d,NO,N/A,N/A,TN
+f7545abbfd70c4439c32f84aaf4041d6df7506b9,YES,Rename ScanConsistency to SearchConsistency ,"""rename"" + ""to""",TP
+e1d00f4e72155fef5900696e453bd43349d135f6,NO,N/A,N/A,TN
+8a29bfae468888bcfa93143abc23670ce7f61331,YES,"This changeset refactors insert, upsert and replace","""refactors""",TP
+e909234b4f032415a89191f1d4f454fd623eac95,NO,N/A,N/A,TN
