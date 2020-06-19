@@ -1,0 +1,25 @@
+COMMIT_HASH,HAS_NFR,PHRASE,NFR,KEYWORDS
+df508b417bb40eed45d1255350f0587a963ce7a0,NO,N/A,N/A,N/A
+b47acb14ad8fc6ebe7448da2144049c059300cec,YES,The latest encryption repository has updates as per latest RFC. So the corresponding changes have to be added. Add verification test for RSA.,Security,"""encryption"", ""RSA"""
+9f97504351723fbbd0188b246115eed5bf37891d,YES,Rename createParents to createPath,Maintainability,"""rename"""
+f586f1af79b3e88ef968ec1c709f65b40c23c974,NO,N/A,N/A,N/A
+4d19fd45ddea135532ff862caf20f9db95c8a009,YES,"Allow crypto transcoder to trancode docs with no encryption
+Add null checks for content and encryption info to not throw NPE",Security + Robustness,"Security: ""crypto"", ""encryption""
+Robustness: ""NPE"""
+a37d6c0cc39be1b98a123d2aeff70eb3f82d9644,NO,N/A,N/A,N/A
+88bc7f3003aee048ddd272fd850acaa457a13807,YES,This changeset brings the Java SDK API-wise in line with the SDK-RFC around client certificate authentication. It worked before but this change brings in the CertAuthenticator as well as adds all kinds of sanity checks so that invalid auth combinations are rejected.,Security + Maintainability,"Security: ""certificate authentication""
+Maintainability: ""sanity check"""
+4c6ff7ec61c2a176e4b4f616bc1df371de626100,NO,N/A,N/A,N/A
+e772eb296987afda90e7ec9a82113431a9e3a364,YES,Allow username/password authentication.,Security,"""authentication"""
+5ce047cf9af0582cc0539fce19b009f72df4163c,YES,"In order to support custom serialization, a better abstract class would be useful.",Maintainability,"""abstract class"""
+9557d8f7d2d16dcf50da5a73306f30bd6ae7f93b,NO,N/A,N/A,N/A
+975b5122f3ff6ec339963a0ab2fbd92371fce3e9,NO,N/A,N/A,N/A
+f0fa427bee53ac793107b4b63e66e8b6c23a1b7f,YES,N/A,Maintainability,N/A
+8963fccc5c15657ec2c65ec85c9373e761cd6f77,YES,N/A,Maintainability,N/A
+bbd08078d651ddf433274f4044cacb8a1e7b6915,YES,N/A,Maintainability,N/A
+b320fb1059bbfe2bb0cb16b70491a7bdf987d474,YES,N/A,Maintainability,N/A
+87ef6325f91e8f280d399c05a02cfb72e88275e2,YES,N/A,Maintainability,N/A
+648d37738ff159ceeaf9d3176dffef3a75a2c972,NO,N/A,N/A,N/A
+377f2529de10016fdda3305185a43da41d770183,YES,"Additionally, improved the documentation of AsyncQueryResult and QueryResult and marked some classes/interfaces as Experimental.",Maintainability,"""improved the documentation"""
+d0c1cfa5e98e628dbca7a604bb52120a84e8aa22,YES,Builds on the core-io change (JVMCBC-48) and forwards the value into the actual user-visible response. Test cases and documentation are adapted appropriately.,Maintainability,"""user-visible response"""
+332d1f4761ef03eeacc8c32549a0b8ce2111daf5,NO,N/A,N/A,N/A
