@@ -1,0 +1,1324 @@
+NUMBER_ISSUE,HAS_NFR,PHRASE,NFR,KEYWORDS
+82,NO,N/A,N/A,N/A
+114,NO,N/A,N/A,N/A
+134,NO,N/A,N/A,N/A
+204,NO,N/A,N/A,N/A
+234,NO,N/A,N/A,N/A
+274,YES,Multiple cooperating processes on the response cache,Performance,"""cache"", ""response"""
+277,NO,N/A,N/A,N/A
+307,YES,We don't have to wait for the request to be sent before allowing inspection of SSL certs. They can be inspected as soon as the connection is established.,Performance,"""wait"""
+317,YES,I am getting this timeout exception with OkHttpClient in Retrofit adapter.,Robustness,"""timeout"", ""exception"""
+384,NO,N/A,N/A,N/A
+389,YES,With this change HttpEngine no longer has a reverse dependency on HttpURLConnection.,Maintainability,"""dependency"""
+471,NO,N/A,N/A,N/A
+504,NO,N/A,N/A,N/A
+505,NO,N/A,N/A,N/A
+518,NO,N/A,N/A,N/A
+526,NO,N/A,N/A,N/A
+670,NO,N/A,N/A,N/A
+680,YES,I'm getting crash reports from users of my Android app with the following stacktrace:,Robustness,"""crash"""
+681,YES,"I know, java serialization is an awful world of pain, but so many frameworks that otherwise require custom serialization-like interface implementations will have a default implementation for java serialization that it's a good idea for libraries to pay the java serialization tax on behalf of users.",Maintainability,"""serialization"""
+697,YES,"Typical use of HTTP/2 stream ID 1 is for UPGRADE, which we don't support. We found that Netty enforces stream ID 1 can't be used, so might as well switch.",Maintainability,"""support"""
+703,NO,N/A,N/A,N/A
+745,YES,"When I'm trying to execute such request it crashes, with error message:",Robustness,"""crash"""
+772,NO,N/A,N/A,N/A
+775,YES,"In the future, those responsibilities are going to increase.",Maintainability,"""responsibility"""
+801,YES,Ensure Push Promise callbacks are processed in order. ,Robustness,"""callbacks"" + ""in order"""
+903,YES,"
+Hi, I've been getting SocketTimeoutException intermittently. I don't think this is an internet connection issue",Robustness,"""exception"", ""timeout"""
+910,YES,"Without this, we get a hard SSL crash when a server returns NPN
+information that was unsolicited.",Robustness,"""crash"""
+929,YES,Uploading picture to Twitter fails,Robusness,"""fails"""
+962,NO,N/A,N/A,N/A
+964,NO,N/A,N/A,N/A
+969,NO,N/A,N/A,N/A
+986,YES,OkHttpClient implies that it can use HTTP/1.0. It can not.,Maintainability,"""implies"" + ""not"""
+988,YES,Runtime error NoClassDefFoundError: com.squareup.okhttp.Request$Builder,Robustness,"""error"""
+995,NO,N/A,N/A,N/A
+1033,NO,N/A,N/A,N/A
+1058,YES,More and more apps are moving to using TLS/SSL for all of their network traffic. It would be great if such apps could configure okhttp to disallow cleartext communications to prevent accidents.,Security,"""TSL"", ""SSL"""
+1070,YES,"As a result, a regression (to using cleartext HTTP) in the app will not lead to sensitive data being transmitted in cleartext.",Security,"""sensitive data"""
+1099,YES,"On the third or fourth app launch, an IOException for invalidLengths is thrown and the cache is invalidated. The app re-fetches the content that is supposed to have already been cached.",Robustness,"""exception"""
+1111,NO,N/A,N/A,N/A
+1120,NO,N/A,N/A,N/A
+1161,NO,N/A,N/A,N/A
+1180,NO,N/A,N/A,N/A
+1343,NO,N/A,N/A,N/A
+1350,YES,crash at /system/lib/libssl.so (SSL_CTX_set_alpn_protos+16) in 2.2.0,Robustness,"""crash"""
+1354,NO,N/A,N/A,N/A
+1390,NO,N/A,N/A,N/A
+1395,YES,Handilng authentication exception,Robustness,"""exception"""
+1447,NO,N/A,N/A,N/A
+1465,NO,N/A,N/A,N/A
+1506,NO,N/A,N/A,N/A
+1540,YES,ArrayIndexOutOfBoundsException reading from stream,Robustness,"""exception"""
+1563,NO,N/A,N/A,N/A
+1632,NO,N/A,N/A,N/A
+1697,NO,N/A,N/A,N/A
+1733,NO,N/A,N/A,N/A
+1751,NO,N/A,N/A,N/A
+1768,YES,App crashed on Internet Issue,Robustness,"""crash"""
+1866,NO,N/A,N/A,N/A
+1872,NO,N/A,N/A,N/A
+1889,NO,N/A,N/A,N/A
+1890,NO,N/A,N/A,N/A
+1902,YES,Using 2.5.0 and excessive / unnecessary close() calls I still get a StrictMode error.,Robustness,"""error"""
+1911,NO,N/A,N/A,N/A
+1922,NO,N/A,N/A,N/A
+1943,YES,I have an Android app where I am basically running an Async task to ping my server for an Access Token every 3 minutes. But after about an hour the app freezes and I see this exception in logcat. The app eventually crashes.,Robustness,"""exception"", ""crash"""
+2002,NO,N/A,N/A,N/A
+2012,NO,N/A,N/A,N/A
+2017,YES,I am getting this exception when running requests in wss with okhttp-ws..,Robustness,"""exception"""
+2054,YES,StrictMode CloseGuard tripped when no network.,Robustness,"""tripped"""
+2055,NO,N/A,N/A,N/A
+2060,YES,"SocketTimeoutException occured while I upload a big file,",Robustness,"""exception"""
+2093,YES,"The underlying data source is already open as we've read the headers, ideally the source() (which just imposes something like limit or decorates chunked/framed reading) is eagerly instantiated so that source() doesn't need to throw.",Maintainability,"""doesn't need to throw"", ""not throw"" (?)"
+2132,NO,N/A,N/A,N/A
+2158,YES,We will document which methods on ResponseBody automatically close it.,Maintainability,"""will document"""
+2186,NO,N/A,N/A,N/A
+2205,NO,N/A,N/A,N/A
+2217,YES,Alright -- I think the docs could be clearer here. :),Maintainability,"""could be clearer"""
+2219,YES,This chunk of code is throwing exception.,Robustness,"""exception"""
+2233,YES,I am getting repeated requests in my network interceptor and there is a stackoverflow due to it,Robustness,"""stackoverflow"""
+2274,NO,N/A,N/A,N/A
+2333,NO,N/A,N/A,N/A
+2346,NO,N/A,N/A,N/A
+2361,YES,sslSocketFactory NullPointException,Robustness,"""exception"""
+2367,NO,N/A,N/A,N/A
+2385,YES,Log is not showing problem,Maintainability,"""Log is not showing"""
+2414,YES,[Bug report] Proxy authenticate over http.,Robustness,"""Bug"""
+2420,YES,NoSuchElementException in DiskLruCache,Robustness,"""exception"""
+2433,YES,"Hi all,whenever i try to connect to my server on a low internet connection i always receive this error",Robustness,"""error"""
+2488,NO,N/A,N/A,N/A
+2533,YES,`isCleartextTrafficPermitted()` fails on OpenJDK 8,Robustness,"""fails"""
+2539,NO,N/A,N/A,N/A
+2549,YES,It's a bug! Can fix.,Robustness,"""bug"""
+2567,NO,N/A,N/A,N/A
+2569,NO,N/A,N/A,N/A
+2570,NO,N/A,N/A,N/A
+2574,YES,Otherwise we can deadlock,Robustness,"""deadlock"""
+2579,NO,N/A,N/A,N/A
+2591,YES,AssertionError when running Unit Tests on Android with Robolectric,Robustness,"""error"""
+2608,NO,N/A,N/A,N/A
+2627,NO,N/A,N/A,N/A
+2662,YES,java.lang.ArrayIndexOutOfBoundsException,Robustness,"""exception"""
+2674,YES,"After I kicked 'make xxx' command, I got java.io.IOException",Robustness,"""exception"""
+2698,NO,N/A,N/A,N/A
+2715,YES,Fix a major bug in our HPACK encoder.,Robustness,"""major bug"""
+2745,YES,NullPointerException in 'c.f okhttp3.ResponseBody.source()',Robustness,"""exception"""
+2765,NO,N/A,N/A,N/A
+2778,YES,I am getting the following exception,Robustness,"""exception"""
+2784,YES,"It occurs a lot, I can't even catch this NullPointer, and is stopping my app. Can you throws a correct exception please ?",Robustness,"""stopping"", ""exception"""
+2787,NO,N/A,N/A,N/A
+2821,YES,I'm using okhttp3 with Picasso and my images are not cached if they are accessed from redirected URIs.,Performance,"""cached"""
+2868,NO,N/A,N/A,N/A
+2947,YES,I get the error response of...,Robustness,"""error"""
+2971,NO,N/A,N/A,N/A
+2987,YES,"No specific ""phrase""",Maintainability,No specific keywords
+3001,YES,Fix flakiness in authenticateWithChunkedStreaming(),Maintainability,"""flakiness"""
+3023,YES,Another problem is that multiple errors cause app to crash. How can I solve this issue?,Robustness,"""crash"""
+3025,NO,N/A,N/A,N/A
+3049,NO,N/A,N/A,N/A
+3098,YES,SSLHandshakeException while connecting to NASA's APOD servers on Pre-5.0 Android Devices,Robustness,"""exception"""
+3215,YES,Method threw 'java.lang.NullPointerException' exception. Cannot evaluate okio.Buffer.toString(),Robustness,"""exception"""
+3225,NO,N/A,N/A,N/A
+3226,NO,N/A,N/A,N/A
+3247,YES,"[BUG]checkOffsetAndCount crash, buffer size is not equals bytecount",Robustness,"""crash"""
+3320,YES,"Seems like if there is some socket issue during streaming POST it does not indicate it immediately, but waits for some buffer to be filled up. Is it possible to reduce this buffer somehow or change this behaviour to fail as soon as possible? Unfortunately I failed to find the exact reason of this.",Performance,"""waits"" + ""buffer"", ""waits"" + ""as soon as possible"""
+3322,YES,NetworkOnMainThreadException when calling evictAll() method,Robustness,"""exception"""
+3372,NO,N/A,N/A,N/A
+3396,NO,N/A,N/A,N/A
+3440,YES,we try to connect with test server same certificate api look like https://one.host.com:9443/api this requets is allow man-in-the-middle attack.,Security,"""man-in-the-middle"""
+3445,YES,Non-fatal Exception: javax.net.ssl.SSLHandshakeException: Connection closed by peer,Robustness,"""exception"""
+3488,NO,N/A,N/A,N/A
+3489,NO,N/A,N/A,N/A
+3513,NO,N/A,N/A,N/A
+3553,NO,N/A,N/A,N/A
+3562,NO,N/A,N/A,N/A
+3577,NO,N/A,N/A,N/A
+3591,NO,N/A,N/A,N/A
+3623,YES,Fail the WebSocket if a pong isn’t received within some reasonable period ,Robustness,"""fail"""
+3664,NO,N/A,N/A,N/A
+3690,YES,Using SynchronousQueue with ThreadPoolExecutor may cause OOM in Android 7.0,Robustness,"""OOM"""
+3757,YES,java.net.SocketTimeoutException: failed to connect to /10.0.0.172 (port 80) after 10000ms,Robustness,"""exception"", ""fail"""
+3762,YES,"The use of Common Name was deprecated in RFC 2818 (May 2000), section 3.1:",Maintainability,"""deprecated"""
+3765,NO,N/A,N/A,N/A
+3812,YES,Benchmarks execution produces OutOfMemoryError,Robustness,"""OutOfMemoryError"""
+3816,YES,force closed 20K times because this error!!!,Robustness,"""force close"""
+3862,NO,N/A,N/A,N/A
+3947,YES,connectionPool().evictAll() works in HTTP but fails in HTTPS,Robustness,"""fails"""
+3957,NO,N/A,N/A,N/A
+3960,NO,N/A,N/A,N/A
+3985,NO,N/A,N/A,N/A
+4017,YES,This makes my app crash.,Robustness,"""crash"""
+4054,NO,N/A,N/A,N/A
+4057,NO,N/A,N/A,N/A
+4110,NO,N/A,N/A,N/A
+4119,NO,N/A,N/A,N/A
+4126,NO,N/A,N/A,N/A
+4135,YES,Infinite retry on FileNotFoundException in okhttp 3.6.0,Robustness,"""infinite retry"""
+4160,NO,N/A,N/A,N/A
+4253,NO,N/A,N/A,N/A
+4278,YES,"ClassNotFoundException: Didn't find class ""kotlin.text.Charsets""",Robustness,"""exception"""
+4346,YES,Cleanup HttpLoggingInterceptor,Maintainability,"""cleanup"""
+4385,NO,N/A,N/A,N/A
+4401,YES,The other two are crashing in OkHttp but not fixable in OkHttp,Robustness,"""crash"""
+4425,NO,N/A,N/A,N/A
+4431,YES,Internal crash UnknownHostException,Robustness,"""crash"""
+4490,NO,N/A,N/A,N/A
+4593,NO,N/A,N/A,N/A
+4615,NO,N/A,N/A,N/A
+4651,NO,N/A,N/A,N/A
+4682,NO,N/A,N/A,N/A
+4712,NO,N/A,N/A,N/A
+4715,NO,N/A,N/A,N/A
+4767,NO,N/A,N/A,N/A
+4774,NO,N/A,N/A,N/A
+4787,NO,N/A,N/A,N/A
+4789,YES,On network change (e.g. wifi -> cellular) okhttp on android fails to connect to a reachable endpoint,Robustness,"""fails to connect"""
+4886,NO,N/A,N/A,N/A
+4942,YES,Slightly More Idiomatic StatusLine,Maintainability,"""more idiomatic"""
+4992,NO,N/A,N/A,N/A
+5042,NO,N/A,N/A,N/A
+5066,NO,N/A,N/A,N/A
+5144,YES,Idiomatic Kotlin in MockResponse.kt,Maintainability,"""idiomatic"""
+5185,NO,N/A,N/A,N/A
+5305,NO,N/A,N/A,N/A
+5340,NO,N/A,N/A,N/A
+5401,YES,After updating okhttp to version 4.0.0 - 4.1.0 application crashes with UndeliverableException on devices running Android 10,Robustness,"""crash"""
+5425,NO,N/A,N/A,N/A
+5444,NO,N/A,N/A,N/A
+5474,NO,N/A,N/A,N/A
+5530,NO,N/A,N/A,N/A
+5556,YES,Okhttp blocks all requests while big request is pending,,"""blocks"" + ""requests"""
+5581,NO,N/A,N/A,N/A
+5599,NO,N/A,N/A,N/A
+5619,NO,N/A,N/A,N/A
+5627,NO,N/A,N/A,N/A
+5631,NO,N/A,N/A,N/A
+5651,NO,N/A,N/A,N/A
+5734,NO,N/A,N/A,N/A
+5736,NO,N/A,N/A,N/A
+64,Yes,stopped assigning the socket,Robusntess,socket
+67,No,,,
+68,No,,,
+115,Yes,This doesn't scale,Maintenability,scale
+162,Yes,around comment styles ,Maintenability,comment style
+197,Yes,Correct specialized platform name,Maintenability,correct
+226,No,,,
+235,No,,,
+261,No,,,
+282,Yes,"results in a crash, still having the same issue",Robustness,crash
+318,Yes,"returning null, I got a crash",Robustness,"returning null, crash"
+347,Yes,Support use,Maintenability,support use
+379,Yes,This breaks support,Maintenability,breaks support
+403,No,,,
+551,No,,,
+588,No,,,
+637,Yes,"Fix a crash on conditional cache, we were returning null, The problem was caused, isn't appropriate",Robustness,"crash, returning null, is not appropriate"
+665,Yes,"ungodly amount of memory, how many connections are kept alive",Performance,"amount of memory, pool, concurrent requests, keep alive, longest-idle connection"
+682,Yes,Weird crash,"Robustness, Security","crash, NullPointerException"
+695,Yes,API review,Maintenability,review
+727,No,,,
+729,No,,,
+751,Yes,This update breaks,Maintenability,breaks
+753,Yes,,Security,segfault
+805,Yes,Added cache and network responses,Maintenability,responses
+817,No,,,
+848,No,,,
+876,Yes,gives out following exception at the crash,Robustness,"exception, crash"
+886,No,,,
+896,Yes,Lint error,Robustness,lint error
+927,No,,,
+935,No,,,
+1038,Yes,Add ability ,Maintenability,Add ability
+1049,Yes,"cause FATAL EXCEPTION, this can crash your app",Robustness,"fatal exception, crash"
+1065,Yes,Fixes gap where synchronous requests weren't canceled,Performance,synchronous requests
+1101,No,,,
+1102,Yes,response cache could be corrupted,Performance,cache
+1169,Yes,they have larger buffer sizes,Performance,buffer size
+1194,No,,,
+1252,No,,,
+1256,Yes,Limit 20 authorization attempts,Performance,limit
+1295,No,,,
+1306,Yes,Connection pool clean shut down,"Performance, Robustness","connection pool, shutdown, shut down"
+1317,Yes,introduces an overload function,Maintenability,overload function
+1457,No,,,
+1462,No,,,
+1528,No,,,
+1535,Yes,Explicit termination method,Robustness,"Explicit termination, crashes, exception"
+1538,Yes,Support sha256 digest,Security,Support sha256 digest
+1539,Yes,"uses sha1 hashes, Using a sha1 hash is a security issue, since sha1 should not be used for signing certificates anymore",Security,"sha1, security issue, attack vector, layer of security, attacker, sha256"
+1546,No,,,
+1567,No,,,
+1576,No,,,
+1588,No,,,
+1619,No,,,
+1647,Yes,"multiple parallel requests, multiple identical requests in parallel, This ties up multiple executors, and downloads the same response twice, and causes the bandwidth to be shared, and increases server load. While not improving client side latency, which is the goal of prefetching, especially bad on high latency or low bandwidth connections",Performance,"Multiple parallel, multiple identical requests, requests in parallel, bandwidth, increases server overload, client side latency, high latency, low bandwidth, multicasting, threading"
+1650,No,,,
+1668,Yes,Add optional Response to WS failure callback,,failure callback
+1679,Yes,"CertificatePinner is pinning against public key rather than SPKI, recommends to avoid misinterpretation attacks",Security,attacks
+1696,Yes,"Evaluate removing IOException from ResponseBody close, exception that can be thrown when closing the underlying",Robustness,"exception, thrown"
+1729,No,,,
+1735,Yes,"Malformed URL RuntimeException thrown on internal thread during asynchronous request, It seems OkHttp crashes application, There is no way to catch the exception, it happens on on internal thread","Robustness, Performance","RuntimeException, thrown, crashes, crash"
+1747,Yes,The request is delayed,Performance,"delayed, connection pool"
+1759,No,,,
+1762,No,,,
+1777,Yes,Received NetworkOnMainThreadException after cancel AsyncCall,"Performance, Robustness","NetworkOnMainThreadException, AsyncCall"
+1780,Yes,we may need to clear the connection pool,Performance,connection pool
+1791,No,,,
+1818,Yes,This minor issue broke the backwards compatibility ,Maintenability,compatibility
+1856,No,,,
+1857,Yes,such as old payloads being written into the new request buffer or server waiting for more data,Performance,payloads
+1875,Yes,Represent WebSocket payload using RequestBody and ResponseBody,Maintenability,represent
+1919,No,,,
+1966,No,,,
+2016,Yes,"I can ask library developers try/catch that, After that his project starts crashing, So almost all of our request fail ",Robustness,"try/catch, crashing, request fail "
+2028,Yes,SocketTimeoutException throw immediately,Robustness,"throw, keep-alive, connection pool"
+2076,Yes,error when calling via https,Security,https
+2084,No,,,
+2122,Yes,"Unexpected read timeout while request is still being sent, configured OkHttp read timeout setting, read timeout setting to mean the maximum time","Robustness, Performance","timeout, maximum time"
+2147,Yes,"java.io.IOException: unexpected end of stream, I use Python websockets to create another websocket server","Security, Robustness","exception, https, websockets"
+2223,No,,,
+2224,No,,,
+2232,Yes,Not closing an uncached body will leak a connection in the pool and log a warning,,"leak, poool"
+2234,No,,,
+2264,No,,,
+2288,Yes,Network interceptor connection() might be null,Robustness,"return null, null"
+2340,No,,,
+2352,No,,,
+2384,No,,,
+2399,No,,,
+2411,Yes,"I get this error (see stacktrace below) now and then, causing the Android app to crash, It seems like the InputStream from the socket is null for some reason",Robustness,"crash, error, socket"
+2459,No,,,
+2476,Yes,Okhttp report the error,Robustness,error
+2486,Yes,"authenticate interceptor leads to ""java.io.IOException: unexpected end of stream, than the time set as OkHttp timeout","Robustness, Performance","authenticate interceptor, stream"
+2509,No,,,
+2555,Yes,Don't crash when a stream hasn't been closed,Robustness,crash
+2565,Yes,"when i use okhttp,this issue happened",Robustness,"issue happened, exception"
+2622,No,,,
+2636,Yes,"But in my experience, one definitely should not recreate",Maintenability,should not
+2650,Yes,Unhandled exception ,Robustness,exception
+2673,Yes,meant to signal the amount of memory,Performance,amount of memory
+2679,Yes,"app crashes on SSL handshake layer, The issue is mostly happening when doing a lot of request at the same time and coming from one of threads used to communicate with places service.","Security, Performance, Robustness","lot of requests, SSL"
+2780,No,,,
+2791,Yes,java.net.ProtocolException: unexpected end of stream,Robustness,exception
+2837,No,,,
+2850,No,,,
+2892,No,,,
+2901,Yes,error occurs while connecting https,Security,"error, https"
+2902,,,,
+2940,Yes,validateCloseCode() throws IllegalArgumentException,Robustness,exception
+2948,Yes,NullPointerException,Robustness,NullPointerException
+2959,Yes,"There’s two different shutdown events that occur, server stops sending messages",Robustness,"shutdown, server stops"
+2967,Yes,NullPointerException,Robustness,NullPointerException
+3000,Yes,Apply timeouts within individual frames,Performance,timeouts
+3064,No,,,
+3070,No,,,
+3079,Yes,I can verify my servers are behaving correctly in tests,"Performance, Maintainability","server, behaving correctly"
+3094,No,,,
+3153,Yes,take more time to make same request,Performance,same request
+3155,No,,,
+3172,Yes,"Unify SocketTimeoutException message, there is a small race when Java's timeout mechanism triggers before,  the same exception is thrown","Robustness, Performance","SocketTimeOutException, race, timeout, exception thrown"
+3174,Yes,"If you have a timeout, there will be no response",Performance,"timeout, response"
+3248,No,,,
+3311,No,,,
+3338,No,,,
+3422,Yes,"multithreaded http2 GET occasionally hang, occasionally hangs with all client threads stuck, the server isn’t hung, it’s just slow",Performance,"multithreaaded, hang, threads, slow"
+3463,Yes,it will leak the memory,Performance,leak the memory
+3493,No,,,
+3494,Yes,"REST api call fails SSLHandshakeException, I get the following java exception",Robustness,"SSLHandshakeException, I get the following java exception"
+3504,No,,,
+3509,Yes,minor cleanup of EventListener formatting,Maintainability,cleanup
+3526,Yes,we are using certificate Pinning for securing the communication with our backend systems,Security,securing
+3541,No,,,
+3549,Yes,"Catch RuntimeException and rewrap as IOException, there isn't even a clear error to report or fix, I think we just let the entire call crash",Robustness,"catch, error, exception, caught"
+3559,No,,,
+3618,Yes,"Fatal error with okhttp and Android, That's a pretty nasty native crash",Robustness,fatal error
+3741,Yes,Replaced explicit null checks by automatically generated,"Maintainability, Robustness","replaced, null"
+3753,No,,,
+3763,Yes,Warmup connection pool,Performance,connection pool
+3770,Yes,"Fix locks, I thought could be cleaned up a bit, it looked like race conditions could still occur","Performance, Maintainability","locks, cleanup, race conditions"
+3803,No,,,
+3817,No,,,
+3839,Yes,minor cleanup of EventListener formatting,Maintainability,cleanup
+3847,Yes,List of encryption algorithms used in library ,Security,encryption
+3853,Yes,minor cleanup of EventListener formatting,Maintainability,cleanup
+3888,No,,,
+3895,No,,,
+3912,No,,,
+3938,Yes,okio writeByte ArrayIndexOutOfBoundsException length=8192; index=8192,Security,exception
+3941,Yes,"Fatal Exception: java.lang.OutOfMemoryError: Could not allocate JNI Env, OkHttp restricts the number of threads","Performance, Robustness","exception, OutOfMemory, threads"
+3949,No,,,
+3954,No,,,
+3958,No,,,
+3988,No,,,
+4002,Yes,OutOfMemoryError,Performance,OutOfMemoryError
+4005,Yes,SSLHandshakeException,,SSLHandshakeException
+4021,No,,,
+4108,Yes,the default Authenticator is not used.,Security,authenticator
+4153,Yes,Handle RejectedExecutionException when enqueue fails,Robustness,"handle, exception"
+4171,Yes,java.lang.NoClassDefFoundError,Robustness,
+4210,No,,,
+4247,No,,,
+4249,Yes,does not handle authentication header with only scheme,Security,hande authentication
+4265,No,,,
+4271,Yes,Refactor String#replaceAll - keep the compiled pattern,Maitainability,refactor
+4294,No,,,
+4314,No,,,
+4354,Yes,"ConnectionPool cleanup is eager, used in a period greater than the idle timeout, We've run into situations internally where we have multiple threads, We really need to close connections that have exceeded the keep alive duration",Performance,"connectionpool, eager, timeout, multiple threads, keep alive"
+4408,No,,,
+4463,Yes,Most of the things it's exercising are obsolete,Maintainability,obsolete
+4469,Yes,"On failed runs,",Robustness,failed runs
+4478,Yes,there are sometimes connections left in the pool ,Performance,pool
+4535,Yes,"HTTPS client auth doesn’t work, The X.509 DN parser treats whitespace differently, Memory leak detection tests are broken, MediaType’s default charset isn’t null","Security, Maintainability, Performance","HTTPS, whitespace, memory leak, charset"
+4553,No,,,
+4574,No,,,
+4691,Yes,"Strange crash during initialization sequense, This is crashing far below OkHttp",Robustness,crash
+4716,Yes,java.lang.NoClassDefFoundError:,Robustness,error
+4764,No,,,
+61,No,,,
+67,Yes,Clean up utility code,Maintainability,Clean up
+69,No,,,
+78,No,,,
+120,Yes,"Optionally follow redirects from HTTPS to HTTP, won't necessarily have a secure final request.",Security,"HTTPS, secures"
+125,No,,,
+142,No,,,
+197,Yes,it will never be null ,Robustness,null
+233,No,,,
+266,No,,,
+276,No,,,
+280,No,,,
+283,Yes,Other classes will be renamed,Maintainability,renamed
+346,No,,,
+374,No,,,
+381,Yes,This cleans up a lot of the unnecessary moving part,Maintainability,cleans up
+383,Yes,We've refactored the code in HttpEngine enough now,Maintainability,refactor
+384,Yes,Rename RawHeaders to Headers,Maintainability,rename
+390,No,,,
+394,No,,,
+413,Yes,Refactor SPDY code to use ByteString for headers,Maitainability,refactor
+415,No,,,
+15,NO,N/A,N/A,N/A
+110,NO,N/A,N/A,N/A
+157,YES,"""We'll likely explode later when attempting to use the socket.
+But that will fail with an IOException, unlike this which was
+failing with a NullPointerException.""",Robustness,"""explode"" ""IOException"" ""NullPointerException"""
+173,YES,"The goal of pinning is to reduce how many CAs you trust. Without pinning, any rogue or compromised CA can impersonate your server.
+Pinning the leaf allows you to trust zero CAs, but at great operational risk: if you lose/compromise/expire your one pinned certificate you're in trouble.
+Pinning a few CAs or intermediate CAs gives you more operational freedom without significant exposure. You're only in trouble if those CAs are compromised.",Security,"""trust"", ""impersonate"" + ""server"", ""rogue"", ""compromised"""
+184,YES,"""causing them to freak out and crash the app"" ""Crashes with..."" ""could cause this crushes.""",Robustness,"""crash"", ""null pointer"""
+189,YES,""" it's also a maintenance problem - OkHttpClient is nice and all, but someday people may want to move to something else.""",Mantainability,"""maintenence"""
+406,YES,"""It wasn't and we were getting
+NullPointerExceptions looking up the bufferPool.""",Robustness,"""NullPointerException"""
+430,YES,"""Fix a bug where discardStream took way too long.""",Performance,"""took"" + ""long"""
+469,NO,N/A,N/A,N/A
+487,NO,N/A,N/A,N/A
+499,YES,"""Requests per second""",Performance,"""per"" + ""second"", ""benchmarkm"""
+569,NO,N/A,N/A,N/A
+626,YES,,Robustness,
+639,NO,N/A,N/A,N/A
+649,NO,N/A,N/A,N/A
+686,NO,N/A,N/A,N/A
+690,YES,"""NullPointerException when closing a stream in okhttp 2.0""",Robustness,"""NullPointerException"""
+702,NO,N/A,N/A,N/A
+709,NO,N/A,N/A,N/A
+746,YES,,Robustness,"""IOException"""
+767,NO,N/A,N/A,N/A
+794,NO,N/A,N/A,N/A
+798,NO,N/A,N/A,N/A
+811,NO,N/A,N/A,N/A
+847,YES,"""These are potentially private and we don't want to leak them to another
+host, regardless of whether they're created by the calling application or
+by the Authenticator.""",Security,"""auth"", ""leak"", ""authenticator"" "
+860,NO,N/A,N/A,N/A
+912,NO,N/A,N/A,N/A
+923,NO,N/A,N/A,N/A
+967,NO,N/A,N/A,N/A
+978,NO,N/A,N/A,N/A
+979,NO,N/A,N/A,N/A
+1023,NO,N/A,N/A,N/A
+1027,NO,N/A,N/A,N/A
+1040,NO,N/A,N/A,N/A
+1057,NO,N/A,N/A,N/A
+1060,NO,N/A,N/A,N/A
+1083,NO,N/A,N/A,N/A
+1094,YES,StatusLine with leading space = ProtocolException,Robustness,"""ProtocolException"""
+1114,YES,"""EOFException in RealBufferedSource.readUtf8LineStrict""",Robustness,"""EOFException"""
+1133,NO,,,
+1152,YES,"after updating my project's okhttp dependencies, every call fails with a NoSuchMethodError.",Robustness,"""Error"", ""NoSuchMethodError"", ""fails"""
+1216,NO,N/A,N/A,N/A
+1260,NO,N/A,N/A,N/A
+1300,NO,N/A,N/A,N/A
+1338,YES,"""New issue Native crash in SSL_CTX_set_alpn_protos""",Robustness,"""crash"""
+1442,YES,"""a non readable connection will always fail with""",Robustness,"""fail"", ""EOFException"", ""stacktrace"", ""exception"""
+1469,NO,,,
+1552,NO,,,
+1598,NO,,,
+1644,YES,"@swankjesse let's add hostname format validation to CertificatePinner.Builder#add()?
+
+Users expect increase of security from CertificatePinner, better to fail early, otherwise CertificatePinner will silently skip the check.",Security,"""security"""
+1670,NO,,,
+1745,NO,,,
+1750,NO,,,
+1767,NO,,,
+1773,YES,Authentication for SOCKS5 proxy?,Security,"""authentication"""
+1786,NO,,,
+1795,NO,,,
+1805,YES,IllegalStateException in Connection.closeIfOwnedBy(),Robustness,"""IOStateException"""
+1813,YES,"Add test for ""unexpected end of stream"" excpetion",Robustness,"""exception"""
+1815,NO,NetworkOnMainThread exception on response.body(),Robustness,"""exception"""
+1819,NO,,,
+1843,NO,,,
+1854,YES,This leads to the following stack trace after a crash:,Robustness,"""stack"" + ""trace"", ""crash"""
+1884,NO,,,
+1898,NO,,,
+1913,YES,Crash when disconnecting,Robustness,"""crash"""
+1946,YES,When sometimes I'm trying to connect to an https url the following exception appears:,Robustness,"""exception"""
+1949,NO,,,
+1970,NO,,,
+1981,NO,,,
+2013,NO,,,
+2031,NO,,,
+2046,NO,,,
+2059,NO,,,
+2067,NO,,,
+2098,NO,,,
+2133,NO,,,
+2163,NO,,,
+2175,NO,,,
+2192,NO,,,
+2216,YES,"""It would be waste of CPU times if any developers are not planning to use it. Is there is a reason to call SSLContext by default?""
+
+""That’s an optimization I hadn’t considered! Will accept a pull request for that.""",Performance,"""CPU"" + ""Times"", ""optimization"""
+2262,NO,,,
+2307,NO,,,
+2312,NO,,,
+2317,NO,,,
+2363,YES,java.io.IOException: unexpected end of stream on okhttp3.Address@###,Robustness,"""IOException"""
+2378,YES,NullPointerException in AndroidTrustRootIndex (Okhttp 2.7.5),Robustness,"""NullPointerException"", ""crash"""
+2383,NO,,,
+2441,NO,,,
+2442,NO,,,
+2457,NO,,,
+2482,YES,Retrofit + OkHTTP causes memory leaks in Tomcat,"Robustness, Performance?","""memory""+ ""leaks"""
+2493,NO,,,
+2540,NO,,,
+2541,NO,,,
+2572,NO,,,
+2582,YES,Inconsistent timeout behaviour when attaching an interceptor that accesses the ResponseBody,Robustness,"""inconsistent"" + ""behavior"", ""ConnectException"" "
+2609,YES,"Yes, that was the fix on the app. However that feels unsafe since a small typo in the host will disable the certificate pinning. From http point of view capital letters has no meaning.",Security,"""unsafe"", ""certificate"""
+2619,NO,,,
+2621,NO,,,
+2647,YES,We had this check for redirects but not for failure recovery.,Robustness,"""failure"" + ""recovery"""
+2752,NO,,,
+2783,NO,,,
+2796,NO,,,
+2814,NO,,,
+2827,YES,"This reflection code is very fragile and I’m reluctant to make it more open than absolutely necessary. In particular I’m worried that a clever policy might break security expectations.
+
+No further action to take on this.",Security,"""security"", ""policy"", ""SSL"""
+2830,YES,Okhttp multipart/form-data post frequently throws java.net.ProtocolException on Samsung S6,Robustness,"""throws"" + ""ProtocolException"""
+2874,NO,,,
+2984,NO,,,
+2993,NO,,,
+3063,NO,,,
+3085,NO,,,
+3089,NO,,,
+3111,NO,,,
+3121,NO,,,
+3131,YES,TrustKit Integration (certificate pinning library),Security,"""certificate"" + ""pinning"", ""security"""
+3148,NO,,,
+3227,NO,,,
+3241,NO,,,
+3249,NO,,,
+3253,NO,,,
+3260,NO,,,
+3262,YES,"Conscrypt Support
+",Security,
+3303,YES,"When the local cache file was edited manually, OkHttp will give a IOException with message:""Content-Length and stream length disagree"". It can't be fixed, OkHttp will continue to give this exception. If OkHttp
+automatically delete the invalid cache or give a option to neglect check content-length?",Robustness,"""IOException"", ""exception"""
+3305,NO,,,
+3314,NO,,,
+3335,NO,,,
+3368,NO,,,
+3389,NO,,,
+3419,YES,Added support for secure connect events,Security,"""secure"""
+3443,NO,,,
+3451,NO,,,
+3472,NO,,,
+3491,NO,,,
+3523,NO,,,
+3536,NO,,,
+3596,YES,OkHttp3 - sll exception on reading response data,Robustness,"""exception"""
+3661,NO,,,
+3683,NO,,,
+3727,NO,,,
+3742,NO,,,
+3755,NO,,,
+3768,YES,java.lang.AssertionError: No System TLS in Android 7.0,Robustness,"""AssertionError"", ""error"""
+3792,NO,,,
+3808,NO,,,
+3833,NO,,,
+3898,NO,,,
+3911,NO,,,
+3917,NO,,,
+3930,NO,,,
+3974,YES,Android P has more socket timeouts,Robustness,"""timeouts"", ""exception"""
+3992,NO,,,
+4015,YES,Bug: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found,Robustness,"""bug"", ""exception"", ""fail"""
+4028,YES,,Robustness,"""IllegalArgumentException"", ""bug"""
+4075,YES,Do this issue create a Security Vulnerabilities ?,Security,"""security"" + ""vulnerabilities"""
+4086,YES,OkHttp fails to set TLS v1.1 and v1.2 on JDK 7,Security,"""TLS"""
+4152,YES,RejectedExecutionException in client.dispatcher().enqueue,Robustness,"""RejectedExecutionException"", ""exception"""
+4196,YES,SSLProtocolException and unexpected end of stream on Connection,Robustness,"""exception"", ""error"""
+4228,NO,,,
+4242,NO,,,
+4280,NO,,,
+4287,NO,,,
+4300,YES,Android Crash (java.lang.IllegalStateException: closed),Robustness,"""crash"", ""IllegalStateException"""
+4333,YES,fix proxy https auth bug,Security,"""proxy"", ""https"", ""auth"""
+4355,NO,,,
+4475,YES,NullPointerException in RealConnection,Robustness,"""NullPointerException"""
+4481,NO,,,
+4482,NO,,,
+4510,YES,FATAL EXCEPTION when using okhttpclient with conscrypt,"Robustness, Security","""fatal"" + ""exception"", ""conscrypt"""
+4530,YES,"We’re using OkHttp for server-to-server connections on high-latency HTTP/2 connections. I’d like some load-balancing features:
+
+Multiple HTTP/2 connections to the same hostname + IP address. We currently have code that aggressively tries to deduplicate connections to the same destination. But our destinations are virtual server-side load balancers that front application servers. We want to cycle out these application servers without clients having to wait for TLS handshakes.
+
+Preallocated connections. Seeding the connection pool before we need it, so when we do we don’t have to pay for a TLS handshake.
+
+Client-side connection TTLs. Long-lived connections can hide problems. By forcing connections to be recreated at a regular interval (say, 1 hour) we can detect performance problems (thundering herds, etc.) before they bite.",Performance,"""performance"", ""load-balancing"""
+4541,NO,,,
+4564,YES,"When the MultipartBody.Part.createFormData(String name, @Nullable String filename, RequestBody body) method is called, if the file name contains Chinese, an IllegalArgumentException will be thrown to locate the calling chain:",Robustness,"""IllegalArgumentException"""
+4570,NO,,,
+4576,NO,,,
+4627,YES,Handle stream exceptions in Transmitter,Robustness,"""exceptions"", ""failure"""
+4675,NO,,,
+4680,NO,,,
+4695,YES,WebSocketHttpTest.missingConnectionHeader failing randomly,Robustness,"""failing"" + ""randomly"""
+4697,YES,Use OkHttp with Retrofit Crash only on Android 6.0.1 Devices， Maybe an ART Bug?,Robustness,"""crash"", ""bug"""
+4750,NO,,,
+4804,NO,,,
+4823,YES,Handshake failed after updated to okhttp 3.14.0,"Security, Robustness","""handshake"", ""IOException"""
+4915,YES,NullPointerException in Http1ExchangeCodec.readResponseHeaders() in OkHttp 3.14.0 ,Robustness,"""NullPointerException"""
+4921,NO,,,
+4957,NO,,,
+4987,NO,,,
+4997,NO,,,
+5011,NO,,,
+5194,NO,,,
+5230,NO,,,
+5249,NO,,,
+5314,YES,HTTPS is slow with AWS ELB,,
+5344,NO,,,
+5382,NO,,,
+5452,NO,,,
+5515,YES,"We have a usecase where TLS/mTLS is handled by a sidecar component (in our case, istio) and our requests need to be done using plain HTTP from applicative side (trying to call using HTTPS will make the call fail).
+Some of the urls to call aren't handled by our organization and can have redirects to other https urls, hence have to be handled from applicative side.
+
+client.networkInterceptors are after ConnectInterceptor and thus the call fails with ""javax.net.ssl.SSLException: Unrecognized SSL message, plaintext connection?""",Security,"""SSL"", ""TLS"", ""mTLS"", ""HTTPS"""
+5520,NO,,,
+5539,NO,,,
+5666,NO,,,
+5771,NO,,,
+86,NO,N/A,N/A,N/A
+149,YES,"However, SpdyConnection.writeSynReset(int, int) and SpdyConnection.writeWindowUpdate(int, int) do not protect their accesses to field SpdyConnection.spdyWriter",Security,"Protect, access, connection"
+153,YES,This introduces failure recovery in the output stream. It means we should be able to recover from any kind of failure that could be triggered by aggressive connection pooling,Recoverability,Recovery
+156,NO,N/A,N/A,N/A
+169,NO,N/A,N/A,N/A
+181,YES,"Possibly unsafe concurrent accesses to DiskLruCache.However, accesses to com.squareup.okhttp.internal.DiskLruCache.size are not protected in the following methods:",Security,"access, protected, unsafe"
+182,YES,"Possibly unsafe concurrent accesses to DiskLruCache.However, accesses to com.squareup.okhttp.internal.DiskLruCache.size are not protected in the following methods:",Security,"access, protected, unsafe"
+196,YES,"30 seconds seems very short, even for Android. Is there an actual problem with 5 minutes? What the timeout wants is something. I don't think I'm ready to make this duration more complex",Performance,"Seconds, minutes, timeout, duration"
+215,NO,N/A,N/A,N/A
+262,NO,N/A,N/A,N/A
+323,NO,N/A,N/A,N/A
+331,NO,N/A,N/A,N/A
+349,NO,N/A,N/A,N/A
+395,NO,N/A,N/A,N/A
+409,NO,N/A,N/A,N/A
+451,NO,N/A,N/A,N/A
+452,NO,N/A,N/A,N/A
+517,NO,N/A,N/A,N/A
+521,YES,Crash when a lots of requests are being made,Performance,a lot + requests
+523,NO,N/A,N/A,N/A
+528,NO,N/A,N/A,N/A
+570,NO,N/A,N/A,N/A
+583,NO,N/A,N/A,N/A
+587,NO,N/A,N/A,N/A
+600,NO,N/A,N/A,N/A
+629,NO,N/A,N/A,N/A
+663,NO,N/A,N/A,N/A
+689,NO,N/A,N/A,N/A
+728,NO,N/A,N/A,N/A
+734,YES,Move HttpUrlConnection implementation to its own package. I'm open to package name suggestions here. those which only exist to facilitate HttpUrlConnection's use.,Maintainability,"suggestions, facilitate use"
+750,NO,N/A,N/A,N/A
+790,NO,N/A,N/A,N/A
+792,NO,N/A,N/A,N/A
+831,NO,N/A,N/A,N/A
+842,NO,N/A,N/A,N/A
+883,NO,N/A,N/A,N/A
+893,YES,Recipe for configuring timeouts,Performance,"timeout, requests"
+894,NO,N/A,N/A,N/A
+906,NO,N/A,N/A,N/A
+945,NO,N/A,N/A,N/A
+991,NO,N/A,N/A,N/A
+992,NO,N/A,N/A,N/A
+1022,NO,N/A,N/A,N/A
+1051,NO,N/A,N/A,N/A
+1066,YES,The code above looks confused too because calling onFailure after onResponse. I'd like applications to be able to throw IOExceptions,Maintainability,"confused, I'd like ... + to be able ..."
+1072,NO,N/A,N/A,N/A
+1090,NO,N/A,N/A,N/A
+1124,NO,N/A,N/A,N/A
+1162,NO,N/A,N/A,N/A
+1192,NO,N/A,N/A,N/A
+1211,NO,N/A,N/A,N/A
+1246,NO,N/A,N/A,N/A
+1249,YES,The structure here is a bit ugly.,Maintainability,"structure, ugly"
+1250,NO,N/A,N/A,N/A
+1329,NO,N/A,N/A,N/A
+1505,NO,N/A,N/A,N/A
+1525,YES,I sometimes get into a state where all connections fail due to a SocketTimeoutException and no requests will succeed until I switch my network connectivity from wifi to cellular data,Robustness,"Connection, fails, requests, bad"
+1568,NO,N/A,N/A,N/A
+1602,NO,N/A,N/A,N/A
+1605,YES,The sensitive data bit is what I need. It would be so lovely to be able to transparently encrypt/decrypt cached responses on the fly,Security,"sensitive data, encrypt"
+1610,NO,N/A,N/A,N/A
+1651,NO,N/A,N/A,N/A
+1656,NO,N/A,N/A,N/A
+1664,NO,N/A,N/A,N/A
+1693,NO,N/A,N/A,N/A
+1711,NO,N/A,N/A,N/A
+1748,NO,N/A,N/A,N/A
+1752,NO,N/A,N/A,N/A
+1775,NO,N/A,N/A,N/A
+1801,NO,N/A,N/A,N/A
+1806,NO,N/A,N/A,N/A
+1828,NO,N/A,N/A,N/A
+1892,NO,N/A,N/A,N/A
+1903,NO,N/A,N/A,N/A
+1920,NO,N/A,N/A,N/A
+1974,YES,Fix URLConnectionTest.writeTimeouts with large receive buffers. MockWebServer.start() call earlier in the test execution. Setting the ServerSocketFactory became a no-op so the server receive buffer size was left as the defaul,Robustness,"timeout, large, size"
+1982,NO,N/A,N/A,N/A
+2034,NO,N/A,N/A,N/A
+2062,YES,Fixed. I also restructured this a bit so we can suppress logging for non-text bodies. (That's a separate PR.),Maintainability,restructured
+2068,NO,N/A,N/A,N/A
+2126,YES,"Instead of having one instance of Authenticator, and that interface defines two methods, we now have two instances of Authenticator and that interface defines one method.",Maintainability,"Instead, interface,"
+2162,NO,N/A,N/A,N/A
+2170,NO,N/A,N/A,N/A
+2204,NO,N/A,N/A,N/A
+2253,NO,N/A,N/A,N/A
+2380,NO,N/A,N/A,N/A
+2388,NO,N/A,N/A,N/A
+2393,YES,"Use key store from default SSLContext, if SSLSocketFactory is not set. He recommended way to do client certificates in OkHttp",Security,"key, SSL, Certificates"
+2404,NO,N/A,N/A,N/A
+2418,NO,N/A,N/A,N/A
+2479,YES,Further constrain when we recover from failed routes.,Recoverability,Recovery
+2491,YES,"Of course, implementations of sha256 and sha1 are correct on both Android versions and both devices receive same certificate. As far as I found, during Android 5 development Android team switched from BouncyCastle to own implementation of some security related classes, including X509PublicKey and other related classes.",Security,"SHA, certificate, key, security"
+2497,NO,N/A,N/A,N/A
+2522,NO,N/A,N/A,N/A
+2532,YES,HttpURLConnectionImpl loops forever trying to recover from a RouteException after disconnect() is called,Recoverability,"Recover, loop"
+2542,NO,N/A,N/A,N/A
+2554,YES,"Is there a planned story for persistent storage e.g. Cookies, HTTP Public Key Pinning or HTTP Strict Transport Security? Strict HTTPS / permanent redirects are probably the simplest ones.",Security,"HTTPS, security"
+2564,NO,N/A,N/A,N/A
+2607,NO,N/A,N/A,N/A
+2639,NO,N/A,N/A,N/A
+2739,NO,N/A,N/A,N/A
+2740,NO,N/A,N/A,N/A
+2760,NO,N/A,N/A,N/A
+2810,NO,N/A,N/A,N/A
+2834,YES,Modify for loop to more performance sensitive. I have modified one of the for-loops to improve its performance.,Performance,"Performance, Loop"
+2860,YES,Minor memory optimization for Util.immutableList. I ran some benchmarks since I was curious about the performance impact,Performance,"Optimization, performance"
+2869,NO,N/A,N/A,N/A
+2886,NO,N/A,N/A,N/A
+2888,NO,N/A,N/A,N/A
+2904,NO,N/A,N/A,N/A
+2964,NO,N/A,N/A,N/A
+3040,NO,N/A,N/A,N/A
+3065,NO,N/A,N/A,N/A
+3132,YES,"Update recipes to include sample code for closing responses. Documentation/Recipe Update Request. The Response class documentation states that it, or its body, must be closed to avoid leaks. The documentation states this could be explicit via a close() call or implicit via using a try () block.",Maintainability,"Update, documentation"
+3150,NO,N/A,N/A,N/A
+3151,NO,N/A,N/A,N/A
+3179,NO,N/A,N/A,N/A
+3182,NO,N/A,N/A,N/A
+3234,NO,N/A,N/A,N/A
+3245,NO,N/A,N/A,N/A
+3251,YES,Recover gracefully from corrupted cache. I'm getting several crashes per day. we should definitely recover better when the cache breaks badly.,Robustness,"Recover, crashes + per day"
+3271,NO,N/A,N/A,N/A
+3274,NO,N/A,N/A,N/A
+3323,NO,N/A,N/A,N/A
+3334,NO,N/A,N/A,N/A
+3403,NO,N/A,N/A,N/A
+3452,NO,N/A,N/A,N/A
+3464,NO,N/A,N/A,N/A
+3476,NO,N/A,N/A,N/A
+3530,NO,N/A,N/A,N/A
+3616,YES,java.security.cert.CertPathValidatorException: Trust anchor for certification path not found,Security,Security
+3647,NO,N/A,N/A,N/A
+3663,NO,N/A,N/A,N/A
+3706,NO,N/A,N/A,N/A
+3793,NO,N/A,N/A,N/A
+3831,NO,N/A,N/A,N/A
+3848,YES,"its hard to efficiently send big payloads. If new message exceeds queue size (16 MiB currently, not exposed ), I would like to signal that to client without closing connection.",Robustness,"efficiently, size"
+3923,NO,N/A,N/A,N/A
+3944,YES,I am currently using custom SocketFactory but not happy with performance as my implementation is simply hacks.,Performance,Performance
+3963,NO,N/A,N/A,N/A
+3969,NO,N/A,N/A,N/A
+3982,NO,N/A,N/A,N/A
+3983,NO,N/A,N/A,N/A
+4059,NO,N/A,N/A,N/A
+4087,NO,N/A,N/A,N/A
+4089,YES,Android 4 and Java 1.7 prefer TLSv1.2 provider,Security,TLS
+4106,NO,N/A,N/A,N/A
+4149,NO,N/A,N/A,N/A
+4184,NO,N/A,N/A,N/A
+4224,NO,N/A,N/A,N/A
+4233,YES,The amount of time seems to be related to whatever has been set with readTimeout(). Calling Response.close() takes a very short period of time (few milliseconds max).,Performance,"Timeout, response, 100ms, time"
+4311,NO,N/A,N/A,N/A
+4343,NO,N/A,N/A,N/A
+4349,NO,N/A,N/A,N/A
+4374,NO,N/A,N/A,N/A
+4395,NO,N/A,N/A,N/A
+4410,NO,N/A,N/A,N/A
+4436,NO,N/A,N/A,N/A
+4441,NO,N/A,N/A,N/A
+4455,YES,The maximum expected time for each file (callTimeout) should be 10 seconds. HTTP/2 Write Timeouts Aren’t Immediate,Performance,"Timeout, seconds, maximum, upload, inmediate"
+4465,NO,N/A,N/A,N/A
+4468,NO,N/A,N/A,N/A
+4495,NO,N/A,N/A,N/A
+4543,NO,N/A,N/A,N/A
+4545,NO,N/A,N/A,N/A
+4603,NO,N/A,N/A,N/A
+4703,NO,N/A,N/A,N/A
+4833,NO,N/A,N/A,N/A
+4837,NO,N/A,N/A,N/A
+4857,NO,N/A,N/A,N/A
+4903,NO,N/A,N/A,N/A
+4911,NO,N/A,N/A,N/A
+4938,NO,N/A,N/A,N/A
+4951,YES,"but I would expect even internally that most deployed software would use internal CAs etc and run traffic over secure connections? To protect user tokens, content, passwords and also for benefit of things like HTTP/2.",Security,"Protect, secure, token"
+4963,NO,N/A,N/A,N/A
+4965,NO,N/A,N/A,N/A
+4970,NO,N/A,N/A,N/A
+4971,NO,N/A,N/A,N/A
+5029,NO,N/A,N/A,N/A
+5085,NO,N/A,N/A,N/A
+5091,YES,Refactor Array utilities to extensions,Maintainability,Refactor
+5130,NO,N/A,N/A,N/A
+5136,NO,N/A,N/A,N/A
+5137,NO,N/A,N/A,N/A
+5207,NO,N/A,N/A,N/A
+5223,NO,N/A,N/A,N/A
+5233,NO,N/A,N/A,N/A
+5248,NO,N/A,N/A,N/A
+5337,NO,N/A,N/A,N/A
+5370,NO,N/A,N/A,N/A
+5381,NO,N/A,N/A,N/A
+5421,NO,N/A,N/A,N/A
+5471,NO,N/A,N/A,N/A
+5482,NO,N/A,N/A,N/A
+5485,YES,"This is attempting to balance simplicity, efficiency, and testability. It doesn't use ScheduledExecutorService because that class wants a permanent scheduler thread. I'm assuming subtract and multiply is faster than mod. Good assumption to validate.",Performance,"timeout, efficiency, faster"
+5639,NO,N/A,N/A,N/A
+5682,YES,crash with custom X509TrustManager,Security,"x509, trust"
+5692,NO,N/A,N/A,N/A
+5706,NO,N/A,N/A,N/A
+5776,NO,N/A,N/A,N/A
+39,YES,"Abandon foolish consistency;
+
+Setting fields and then calling a method is just not as usable
+as calling a method that takes arguments. Also move Settings into their own class, so we can sling them
+around without a bunch of ceremony.",Maintainability,
+71,YES,Improve SPDY error handling and concurrency.,"Robustness, Performance","Error handling, concurrency"
+138,YES,FaultRecoveringOutputStream,Robustness,Fault Recovering
+183,YES,IllegalArgumentException: Buffer size <= 0 when doing post request,Robustness,IllegalArgumentException
+189,YES,"Besides being invasive, and requiring changes to all libraries, it's also a maintenance problem",Maintainability,Maintenance
+235,NO,,,
+246,YES,Without this change OkHttp will not be able to connect to strictly conforming sites such as https://twitter.com that will reply to the extra frame with RST_STREAM with error code 9 - STREAM_ALREADY_CLOSED. The library then would continue to reconnect in a loop until memory is exhausted and the process crashes.,Robustness,
+292,YES,restrict the performance,Performance,
+294,NO,,,
+304,YES,SPDY performance issue;,Performance,performance
+337,YES,This is causing requests which could legitimately be served with a 304 response to receive a 200 from our server.,Robustness,304
+346,NO,,,
+359,YES,"user can set more Highly effective Dns resolver to Enhance the Performance; 
+The default dns is Very slow; This can enhance the dns performance and Accuracy for cdn;
+",Performance,
+378,YES,"Previously we were passing the live socket around, which was leaky and gross. in the future we can use it to allow the application to block requests if the handshake is insufficient.",Security,
+380,NO,,,
+394,YES,Another round of header APIs cleanup,Maitainability,cleanup
+418,YES,Remove duplication of protocols in MWS' NPN declaration.,Maitainability,duplication
+427,NO,,,
+488,YES,Fix mockwebserver jar download 404,Robustness,"Fix, 404"
+515,YES,"a failure unrelated to SPDY can cause re-try to downgrade to http/1.1; 
+a network hiccup interrupts the connection; duplicate ACK from client; server sends RST; client re-establishes connection with SSLv3 instead of TLS, no npn, no spdy","Security, Robustness, Performance",
+517,YES,"Fix some OkBuffer bugs; Moving bytes between buffers crashed when the destination
+was empty and the source was a prefix; InputStream reading returned values in -128..127 instead
+of in 0..255.",Robustness,"bug, crashed"
+563,NO,,,
+570,NO,,,
+572,YES,Implement SCSV for TLS fallbacks,Security,TLS
+574,NO,,,
+597,YES,Kill some dead code on source and sink closing.,Maintainability,dead code
+602,YES,Test case for read timeout granularity,Performance,timeout
+605,NO,,,
+624,YES,Picasso fails to load image with okhttp due to 304 Not Modified response from server;  I was curious as to why the okhttpdownloader is throwing an exception when a 304 is received,Robustness,"fails, exception"
+745,YES,"When I'm trying to execute such request it crashes, with error message: java.lang.IllegalStateException: Cannot stream a request body without chunked encoding or a known content length!",Robustness,"crash, error exception"
+775,YES,"Our cache interface is broken;  It's pretty much impossible to implement correctly, and it's fragile to future changes","Robustness, Maitanability",broken; future changes
+797,YES,Add socket-wide timeouts for HTTP/2; define and implement policy to detect timed-out SPDY sockets,Robustness,timeout
+800,YES,"NPE on proxySelector.select; proxySelector was null during a test run. Exception in thread ""OkHttp Dispatcher"" java.lang.NullPointerException",Robustness,Exception
+832,YES,Add tests to show we drop authentication headers on redirect.,Maintainability,
+873,YES,"I either crash inside Okio, or receive an IOException back that the stream is closed",Robustness,"crash, exception"
+895,NO,,,
+923,YES,Use IOException in Callback failure method. #923,Robustness,"exception, failure"
+929,YES,Uploading picture to Twitter fails; it stalls in the middle of the upload. In the end I get stream was reset: CANCEL,Robustness,
+942,NO,,,
+959,YES,"Restrict HTTP/2 connections to AEAD ciphers only; restricts TLS cipher suites, and requires support of [TLS-ECDHE] with P256 [FIPS186]; TLS 1.2 where !isBlock() && !isStream() or TLS 1.3; We offer HTTP/2-capable ciphers, and HTTP/2 incapable ciphers. If the server incorrectly negotiates a non-HTTP/2 cipher suite and the HTTP/2 protocol, we'll do HTTP/2; alternately we'd need to kill the socket and renegotiate TLS, disabling ALPN",Security,"cipher, TLS"
+982,NO,,,
+1007,YES,Option to connect to all IPs behind a hostname in parallel; the time it look was comparable to my RTT to that datacenter (5-15ms in most cases); give you a connection to the IP with the lowest latency.,Performance,"time, latency"
+1049,YES,"cancel a async call will cause FATAL EXCEPTION; FATAL EXCEPTION: OkHttp Dispatcher; Currently OkHttp sends the failure to the executor thread's uncaught exception handler; this can crash your app; I was hoping if we could either catch that exception properly, or find a way to neglect that issue",Robustness,"Fatal, exception, failure, uncaught, crash"
+1068,YES,"support Digest Auth (#662) Jake mentioned that you manage auth in your application layer;  Do you have a general technique that you employ to manage auth, redirects and other logic",Security,
+1069,YES,"MockWebserver 2.0 play() does not seem to work;  the server does not accept incoming connections; it does not seem to accept any connection, Just says connection refused; java.net.ConnectException: failed to connect to localhost/127.0.0.1 (port 54415): connect failed;  doesn't bind to non-loopback interfaces",Robustness,"Exception, connection refused, "
+1087,YES,"Revise how TLS connections are negotiated; Now we explicitly enable TLSv1.2, TLSv1.1 and TLSv1.0 where they are supported.
+We continue to perform only one fallback, to SSLv3; we can make TLS configurations user-accessible",Security,TLS
+1121,YES,Be consistent about host names in RouteSelector,Robustness,consistent
+1137,YES,received many failures; received one less failure; I get several failures (e.g. ones related to thread interruption); sorry for the awful turnaround on the review,Robustness,"failure, awful"
+1145,NO,,,
+1232,YES,Socket and ServerSocket are both Closeable for which an overload already exists,Robustness,
+1238,YES,fix pool leak,"Performance, Robustness",
+1322,YES,"TLSv1 supports TLS extensions so they should be enabled;  fallback connections started failing on Android
+after the COMPATIBLE_TLS was changed to be TLSv1;  COMPATIBLE_TLS was SSLv3","Security, Robustness",
+1350,YES,crash at; I am still seeing this crash; invalid address or address of corrupt block,Robustness,
+1354,YES,"Send if-modified-since or if-none-match, but never both;We should prefer If-None-Match only; Send at most one condition.",Robustness,
+1460,YES,NullPointerException; t might be fixed; NPE is on buffer.head,Robustness,
+1470,NO,,,
+1486,YES,we never decode %7c into |; APIs like addQueryParameter should not discard newline characters; they can be encoded. We only discard those characters when the input is already encoded.,Robustness,
+1523,YES,Dealing with bad ResponseCaches; This bug was raised against Lollipop; some of the code mentioned in the bug; the bug comes down to a ResponseCache implementation not returning the status line as a CacheResponse header with a null key as it is expected to do; On recent versions of Android the lack of a status line causes a NullPointerException; I'm tempted to suggest we replace the NullPointerException with a more obvious exception that encourages developers to fix their response cache; Throw an exception that makes it clear what needs to be fixed,Robustness,exception
+1546,NO,,,
+1547,NO,,,
+1561,YES,SIGSEGV crashes on Samsung Devices w/ OkHttp 2.3; happen very occasionally,Robustness,crash
+1603,YES,"Decode paths, usernames and passwords; A building block towards encoding hostnames",Robustness,
+1614,YES,Parse IPv6 addresses,Robustness,
+1638,NO,,,
+1646,YES,"java.net.UnknownHostException: Unable to resolve host ""appname.appspot.com"": No address associated with hostname; I've got the same issue (also appspot) and the problem occurs for 10% of all calls; Non-fatal Exception: retrofit.RetrofitError: Unable to resolve host ""appname.appspot.com"": No address associated with hostname",Robustness,Exception
+1733,YES,compression has an opportunity for giving up-to 75% reduction in payload size,Performance,
+1741,YES,Unexpected end of stream on Connection; java.io.IOException: unexpected end of stream on Connection,Robustness,Exception
+1763,YES,There are some crashes on the kikat devices,Robustness,Exception
+1784,NO,,,
+1800,YES,"socket close exception; when I send request to the server, ""socket closed"" appeared quite often",Robustness,exception
+1851,YES,Throw UnknownHostException not IllegalArgumentException for bad host,Robustness,exception
+1852,YES,Make the MockWebServer tests more Android compatible,Maintainability,
+1862,YES,NetworkOnMainThreadException on Cancel,Robustness,exception
+1868,YES,Add a 3030 testcase; Crashes Chrome,"Robustness, Maintanability",crash
+1891,YES,help with the logging of the request being sent,"Robustness, Security",
+1892,YES,recipes/Progress.java not working for android; I don't get any exceptions but don't see any progress or the downloaded file; On debugging I see the response object vanishes after HTTPEngine.java line 905; Figured out the problem was that the Progress.java example only seems to work for requests with ResponseBodys where as I wanted the progress of a GET,Robustness,
+1897,YES,"HTTP/2 fails with PROTOCOL_ERROR on nginx, including wordpress.com; gave the exception ""android java.io.IOException: stream was reset: PROTOCOL_ERROR"". The same works fine in devices with older OS; java.io.IOException: stream was reset: PROTOCOL_ERROR; I get 404 Page not found; I think it’s a bug in the nginx beta; This causes nginx to incorrectly report a protocol error.",Robustness,Exception
+1921,YES,"NPE When Reading Header; java.lang.RuntimeException: An error occured while executing doInBackground(); This happens when the call times out; When there is no response, the Response object is null, and in readResponse, it calls the object without checking whether it's null or not",Robustness,Exception
+1928,YES,"i found the progress is not the real progress; if i upload a file ,after the progress finished,i will wait the same time(the time the progress spend) again to get the response from server; One problem I have with this though is that I see the progress bar going up twice, once fast and another one slower; he underlying problem is we don't have a mechanism for the peer to acknowledge received writes",Robustness,problem
+1965,YES,"Issue with throwing some exception before calling proceed in interceptor; when I throw exception before calling proceed, OkHttp will fail because HttpEngine inside is created after all interceptors in getResponse() method; FATAL EXCEPTION: OkHttp Dispatcher; Try 2.6.0-SNAPSHOT. Please report back here if that fixes your problem.",Robustness,"Exception, fail, fatal"
+1981,YES,"MockWebServerTest.throttleRequest() is flaky; FAILURE! - in com.squareup.okhttp.mockwebserver.MockWebServerTest; java.lang.AssertionError: Request + Response; Seems like in the run above the host VM paused for ~7.5 seconds. To make this work without flakiness we need to either extend our margin of error from 500ms to 10 seconds, or go to a test infrastructure with fake clocks everywhere.",Robustness,"Failure, error"
+2014,YES,Code quality fix - Strings literals should be placed on the left side when checking for equality,Maintainability,
+2053,YES,Connection Pool isn't pruning; It needs to be fixed before shipping the 2.7 final; I'm getting some really funky SocketTimeoutExceptions,Robustness,Exception
+2113,NO,,,
+2126,YES,"One authenticate method on the authenticator interface; Instead of having one instance of Authenticator, and that interface
+defines two methods, we now have two instances of Authenticator and
+that interface defines one method; This prevents leaking request-specific configuration (the authenticator)
+into shared connection configuration (the proxy authenticator)",Security,
+2223,NO,,,
+2257,NO,,,
+2258,NO,,,
+2315,YES,"SOCKS proxy not working on Android platform; SOCKS proxy is completely broken on Android; hen I set up SOCKS proxy in my app, all requests failed, when I wrote an instrumentation test, I found even create a default okhttp instance with a SOCKS proxy, it fails; java.net.UnknownHostException: Host is unresolved: www.google.com; Seems it's a bug inside Android Socket implementation;",Robustness,"fails, exception"
+2340,NO,,,
+2363,YES,"java.io.IOException: unexpected end of stream on okhttp3.Address@###; on first attempt I get mentioned in title error; There is no rule when issue is occuring down; Does the problem occur without Stetho? Looks like a Stetho bug at first glance; It is hard to say. Without and with Stetho in logcat there is no sign of this error. I noticed it while browsing Stetho so I post it. As I refered to another issue there was an identical error message directly indicating for okhttp3 class Address; I had a similar issue and resolved it by setting ""Connection: close"" in the header; It seems ""Keep-Alive"" is added to the HTTP header by default and was causing an issue for me; I also experience this. I too only see when using stetho with no sign in LogCat. I do not know if it is a bug with Stetho or OkHttp, and every time I saw this issue, the request than executed again successfully; I don't think it is a bug in Stetho but assuming some issue with the established connection as that is what the Exception is telling us. Perhaps the server is closing the connection without honoring the keep alive request in some cases. With the server I'm testing, number of Exception I get keeps changing. Sometimes no exception at all.
+I ended up removing .header(""Connection"",""close"") to have keep alive working when there is no Exception thrown. The exception is just a internal connection check which fails fast so I'm just ignoring it for now; But if it's not a bug with stetho, than how come the OkHttp LoggingInterceptor does not log the two requests; I started getting this exception logged immediately after we turned on gzip compression on server; In my case, it`s been server-side error, not client; our nginx cached large responses into local folder /tmp/cache/nginx/some-cache-folder.
+This some-cache-folder has incorrect access rights and nginx close connectiond immediatly, when ended its inner buffer, without save responses into folder; Got the same error. Turns out turning off BODY logging fixed it for us.
+
+
+
+",Robustness,"Exception, bug, error"
+2364,YES,"java.lang.NullPointerException: Attempt to get length of null array; java.lang.NullPointerException: Attempt to get length of null array; There was no error in 3.0.1 version, started to crash in 3.1+; I had also this error. I managed to fixed it by changing 'return null;' for 'return new X509Certificate[0];' in getAcceptedIssuers()",Robustness,"Exception, bug, error, crash"
+2411,YES,"IllegalArgumentException: in == null; I get this error (see stacktrace below) now and then, causing the Android app to crash",Robustness,Exception
+2429,YES,TCP Fast Open support; it could improve performance in high latency networks,Performance,latency
+2444,YES,Igor static.analysis; Reformat code; your PR appears to just reformat the code. I don't believe in reformatting the code; here were a couple of methods that were throwing exceptions for no reason. And a couple of generic types that do not need to be there. And imports that weren't organized into proper blocks.,Maintainability,
+2457,YES,"response.headers() splits headers by itself; It is supposed to print this: WWW-Authenticate: Bearer realm=""Users"", error=""invalid_token"", error_description=""Token expired.""  But it only prints this: WWW-Authenticate: Bearer realm=""Users""; It is like takes header until the first comma, but it is not supposed to; when I use the get() method I obtain all the values for a header, not only until the first comma; I am having a issue almost like yours. I'm making a client to consume resources from a server that must response with 3 non-standard headers, using normal run only the standard headers come, in debug mode all the headers came. I think that HttpEngine its building the response before all the parts of the response arrive; I added a ""Transfer-Encoding: chunked"" header to the request. It did OkHttp read the response properly.",Robustness,
+2469,YES,"but am seeing different behaviour for the same operation; Not sure of the root cause, but I believe its actually an error from the server that gets translated into a retry because of IPv6 and IPv4 addresses that are available. java.io.IOException: stream was reset: REFUSED_STREAM; Again it seems to be based on the ordering of events; I can reproduce this by setting a breakpoint in FramedConnection, line 508. It looks like the server is sending the SETTINGS frame before we have time to send the connection preface. We ACK the settings before sending our connection preface;  We should defer starting the reader thread until after we’ve written the connection preface; It might be as simple as moving this line to the bottom of sendConnectionPreface(), renaming that method to suit its new functionality, and fixing any tests that this upsets.",Robustness,Exception
+2472,YES,"When I request to ""example.com"", server redirects it to some ""static-cached-data.example.com"", then okhttp follows it, and caches with key ""static-cached-data.example.com"". The next ""example.com"" requst is still uncached... This time server may redirect to ""another-static-cached-data.example.com",Robustness,
+2515,YES,NetworkSecurityPolicy based ConnectionSpec setup; I've added a isCleartextTrafficPermitted method to Platform which determines whether the device permits cleartext,Security,
+2546,YES,Our web server sends a gzip payload back without setting the appropriate headers. This causes okhttp not to unzip the payload.,Robustness,
+2548,YES,"encodedQuery is not what I expect; I find a bug in HttpUrl; the QueryParamete must be encoded,like the QUERY_COMPONENT_ENCODE_SET = "" \""'<>#&="" ,but sometimes it is ok in httpUrl; the url below is what I # expect",Robustness,bug
+2635,YES,"Move MockWebServer TestRule implementation; It is probably better to have a separate MockWebServerRule. This would allow developers to use MockWebServer without the junit dependency; Optionally, MockWebServerRule could be moved in to a mockwebserver-junit package for all junit-related functionality; it's probably better to have a separate MockWebServerRule anyway, because that keeps the MockWebServer code cleaner; That would make it really easy to test business class",Maintainability,"move, code cleaner, easy to test"
+2666,NO,,,
+2781,YES,Getting crash issue in on Cache;  I would have expected something about an exception.,Robustness,"crash, exception"
+2782,NO,,,
+2836,YES,"ART fails with Method processed more than once;  sequence fails at random place; I switched from 3.4.1 to 3.3.0 and errors when sending short requests disappeared;  when sending images, for example, it fails again with the error described above; It looks like you’re triggering a bug in Art somehow; maybe the error recovery in that method isn’t very good. If that’s the case you’ve somehow found a way to get the Dex verifier in an unexpected state; Problem exists only on my tablet; it fails only in a situation when transferring large files; it fails in every situation, at random places; probably an art bug in marshmallow; I had the same problem",Robustness,"fails, error, bug, problem"
+2867,YES,"Support TLSv1.3; TLSv1.3 is coming. okhttp needs to be adjusted to not disable TLSv1.3 in the underlying TLS stack, or to at least let the user of okhttp enable TLSv1.3 if the underlying TLS stack supports it. At the moment, okhttp prevents the use of TLSv1.3 even if the underlying TLS stack offers it. My understanding is that all that needs to change in okhttp is: (1) add TLS_1_3 enum to TlsVersion, and (2) add TlsVersion.1_3 to ConnectionSpec.MODERN_TLS.",Security,TLS
+2868,YES,"Do not disable TLSv1.3 by default; This adjusts TLS protocol selection logic to leave TLSv1.3 enabled if it's enabled in the underlying TLS stack. Prior to this change,
+TLSv1.3 was disabled unless the user of okhttp explicitly enabled it via a custom ConnectionSpec.",Security,TLS
+2921,YES,"Parse authentication headers with wrong order; HttpHeaders.parseChallenges(...) changed to parse also wrong ordered authentication headers.
+
+Authentication headers with wrongly ordered parameters not following RFC 2617 were not recognized.",Robustness,
+2930,YES,"addEncoded，ignoring the '%'; No to encode %, which leads to the url encoding is not successful",Robustness,
+2952,NO,,,
+2998,YES,HEAD requests break if the response contains the Content-Length header; I got this error: java.io.IOException: Content-Length and stream length disagree,Robustness,"break, error, exception"
+3032,YES,Fail the HTTP/2 connection if first frame isn't SETTINGS,Robustness,fail
+3041,YES,Making request with same url and different accept header returns previous response from okhttp cache; The key maps a URL to a potential entry. The contents still must be read to determine caching semantics.,"Robustness, Security",
+3053,YES,javax.net.ssl.SSLException: Connection closed by peer; This is my code and I am getting an exception like this: javax.net.ssl.SSLHandshakeException: Connection closed by peer,"Robustness, Security","SSL, exception"
+3118,YES,SSLHandshakeException after leaving the app and returnin; SSLHandshakeExceptions are now thrown for every request until a new OkHttpClient is created,"Robustness, Security","SSL, exception"
+3143,YES,"Change MediaType's failure mode to not crash on charset problems; As-is it throws unchecked exceptions on unexpected charsets. This is a problem
+because it can cause a misbehaving webserver to crash the client.",Robustness,"failure, crash, exceptions, problem, unexpected, misbehaving"
+3201,NO,,,
+3222,NO,,,
+3239,YES,okhttp3.internal.http2.StreamResetException: stream was reset: FLOW_CONTROL_ERROR; I have problem like this: https://stackoverflow.com/questions/42828812/okhttp3-flow-control-error. Only for file more 20MB.,Robustness,"exception, error, problem"
+3313,NO,,,
+3318,YES,"Distinguish between connect timeout and read timeout; Feature request: Throw identifiable exceptions for read timeout and connect timeout.
+We wish to retry on connect timeout errors and not on read timeouts. The okHttp client throws the same exception in both cases. The only way to distinguish between the two is the through the error message, which is not clean or reliable; how to solve this problem?; A read timeout implies that the network is intact and the server is still processing the request. A connect timeout would mean that the server didn't receive the request.;  the transport layer library throws a java.net.ConnectException: Connection timed out: connect if it does not receive an ACK during the connect timeout.",Robustness,"exception, timeout, errors"
+3340,YES,"java.nio.charset.IllegalCharsetNameException: %s; I met a very strange problem, appear on okhttp version 3.4: under Caused by: Java nio. Charset. IllegalCharsetNameException: %s.; decode the charset manually",Robustness,"exception, problem"
+3368,NO,,,
+3375,YES,"ven after onResponse was called on our callback on a different thread, cancel() is still called from the main thread due to its concurrency nature - therefore cancel() calls cancel() on the RetryAndFollowUpInterceptor which calls cancel() on the StreamAllocation which we believe gets us in a state where we have a successful response with no body - response.body().string() returns null. We believe that a fix for this might be to do a return in the cancel() method on the RealCall class if the AsyncCall delivered response to the callback.; We definitely intend to support canceling a request even if its body has been (partially) delivered. I’d like to write a test to confirm that the response body is never null if its response is canceled; that would be a horrible bug.; Calling cancel() will cause that response body to throw an IOException which you can recover from gracefully",Robustness,"bug, exception, recover"
+3391,NO,,,
+3400,YES,Flaky test: `Unexpected status line: ng Protocols`; WebSocketHttpTest.nullByteStringThrows failed due to what looks like an Okio segment sharing problem.; java.net.ProtocolException: Unexpected status line: ng Protocols,Robustness,"exception, failed, problem"
+3429,YES,"The header equal to close is Proxy-Connection and not Connection. And thus it does not goes trough a proxy.; We might be better to handle Connection: close when talking to a proxy.; We are having the same issue with squid/2.6.STABLE21, it sends Proxy-Connection: close header with 407 response code, so we end up with java.io.IOException: unexpected end of stream on null",Robustness,exception
+3431,NO,,,
+3432,NO,,,
+3460,NO,,,
+3465,YES,"Uncaught IllegalArgumentException causing fatal crash; I'm seeing a rare crash in my app's crash reporting. It stems from the Okio library. I'm not sure exactly what the root cause is, but for some reason, the sink or source methods will get called with a null input or output stream, causing an IllegalArgumentException to be thrown. These methods do not have a throws IllegalArgumentException declaration in method declaration, so they cause a crash if not caught. This isn't an issue when making a synchronous RealCall, because I can just catch the exception myself. However, when using AsyncCall, the exception will crash the app. Here is the stack trace: Exception java.lang.IllegalArgumentException: in == null; A quick fix would be to catch both an IOException | IllegalArgumentException e in RealCall.java line 143. You would have to deal with the fact that onFailure currently takes an IOException of course.;I am seeing the exact same thing in my crash reporting.; This is plaguing my application too I've gotten my app to 99.9% crash free rating, but this is still getting the most crashes.; I'm not getting any references to what's happening when the crash happens though. Fatal Exception: java.lang.IllegalStateException",Robustness,"crash, fatal, exception, uncaught"
+3560,NO,,,
+3597,YES,NullPointerException in HttpUrl.class; java.lang.NullPointerException: Attempt to invoke virtual method 'int java.lang.String.length()' on a null object reference at okhttp3.HttpUrl.canonicalize(HttpUrl.java:1751),Robustness,exception
+3676,YES,"NullPointerException in okhttp3.internal.http.RealInterceptorChain.proceed with synchronous implementation. Thousands of reports;  I'm getting thousands of daily errors from okHttp, according to the Google Play Console Crashes Reports.; Although not directly handle the okHttp, the error log only refer to it; The errors started happening after I started using the Refrofit synchronously (call.execute) from within AsyncTaskLoader.;  problem continues even though the code is surrounded by a NullPointerException try/catch.; I can not debug this error because the same error does not occur in my development environment",Robustness,"exception, error"
+3679,NO,,,
+3719,,"Crash: Unexpected TLS version: NONE; there were no problem; Fatal Exception: java.lang.IllegalArgumentException: Unexpected TLS version: NONE; this crash stills there; the fix is in the next release (3.10), until then when they happen you will get a crash from OkHttp.; We're observing the same crash. 100% of crashes happen to users on Google phones; same crash; Fatal Exception: java.lang.IllegalArgumentException: Unexpected TLS version: at; Mostly fixed in 3.10, but there was a race condition; this issue still exists in okhttp3.12.1.
+",Robustness,"crash, fatal, exception"
+3746,NO,,,
+3753,NO,,,
+3762,NO,,,
+3765,NO,,,
+3772,YES,"java.lang.ClassNotFoundException: Didn't find class ""android.security.NetworkSecurityPolicy""; I have the same problem. The app crashes on Android 4.2.2 since I added a network security policy to my app.; java.lang.NullPointerException; I got the same crash on xiaomi 4.x. But okhttp has caught the ClassNotFoundException. It seems that ClassNotFoundException cannot be caught on xiaomi 4.x? Caused by java.lang.ClassNotFoundException","Robustness, Security","exception, problem, crashes"
+3791,NO,,,
+3826,YES,"HttpLoggingInterceptor leaks Authorization Header; hen using Level.HEADERS or Level.BODY all HTTP headers of request and response are printed.
+If someone is using these for e.g. tests running on a CI server, the logs will leak authorization tokens.",Security,"Authorization, leak"
+3828,NO,,,
+3830,NO,,,
+3885,YES,changes of closing the stream on ioexception; The followUpRequest IOException is catch and the streamallactor is closed and the exception is re throws the IOException,Robustness,exception
+3888,YES,"Dont System.exit the test runner; Blame any uncaught exceptions on the last test to run. This isn't work as I hoped, still testing this.; Example Failure",Robustness,"exception, failure"
+3894,YES,"SLL Handcheck Error; i've got an SLL error on Android 4.4 version when i update from 3.9.1 to 3.10.; error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure (external/openssl/ssl/s23_clnt.c:741 0x5c528d38:0x00000000) ---> Java.IO.IOException: SSL handshake aborted: ssl=0x59a0feb8: Failure in SSL library, usually a protocol error",Security,"SSL, protocol error"
+3915,YES,Frequent cancelling the HTTP/2 requests will cause client never sends WINDOW_UPDATE frame; the connection will timeout and not be able to send/receive any data; In our HTTP/2 code we don't ack bytes until they're delivered to the application. It's insufficient to get them to the Http2Stream;,Robustness,
+3924,NO,,,
+3925,YES,Https proxy Proxy-Authorization is missing,"Security, Robustness",
+3932,NO,,,
+3934,YES,MockWebServer should have public APIs for HeldCertificate and SslClient; SslClient: new APIs for my certs vs. peer’s certs. Should accept a cert to trust.; MockWebServer: setWantClientAuth(true) on incoming SSL sockets,Security,"SSL, certs, trust"
+3951,YES,Certificate Pinning example fails with incorrect exception; fails with exception/stacktrace: javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorException: Trust anchor for certification path not found,Robustness,"exception, fails"
+3992,NO,,,
+4004,NO,,,
+4046,YES,includes a shutdown NPE fix,Robustness,NPE
+4067,YES,"Flaky test in Travis - MockWebServerTest.disconnectRequestHalfway; [ERROR] Tests run: 32, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.175 s <<< FAILURE! - in okhttp3.mockwebserver.MockWebServerTest [ERROR] disconnectRequestHalfway(okhttp3.mockwebserver.MockWebServerTest); the correct fix is to pause long enough at half way to allow the server cancel to win the race over the client stuffing more data down the pipe including HTTP/2 and socket buffering.",Maintenance,
+4126,YES,modified the test in question to stop discarding the bytes on cancel and it fails with the exact error we're seeing in our application:,Robustness,fail
+4127,YES,Confirm concurrent HTTP/2 requests with empty flow-control window.,Performance,concurrent
+4207,NO,,,
+4208,YES,"IndexOutOfBoundsException in RealConnection; got following crash in google pixel xl device with android p using okhttp3.11
+Fatal Exception: java.lang.IndexOutOfBoundsException: Index: 0; Seems like a real bug triggered by an unfortunate (bad?) server setup.",Robustness,"exception, crash, fatal"
+4254,NO,,,
+4277,NO,,,
+4405,NO,,,
+4449,NO,,,
+4533,NO,,,
+4541,NO,,,
+4545,NO,,,
+4546,YES,javax.net.ssl.SSLException: Unable to create application data,Robustness,exception
+4602,NO,,,
+4629,NO,,,
+4653,YES,"Fix the name of a TLSv1.3 cipher suite, TLS_AES_128_CCM_8_SHA256; we made either a transcription error or grabbed a suite
+from an earlier version of the spec.","Robustness, Security","fix, error, cipher, TLS"
+4656,NO,,,
+4664,NO,,,
+4685,YES,"LoggingEventListenerTest.secureGet failing with incorrect cipher suite; LoggingEventListenerTest.secureGet failing on jdk1.8.0_144 with:
+
+java.lang.AssertionError: 
+<[382 ms] secureConnectEnd: Handshake{tlsVersion=TLS_1_2 cipherSuite=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 peerCertificates=[CN=localhost] localCertificates=[]}>
+did not match pattern
+<\[\d+ ms] secureConnectEnd: Handshake\{tlsVersion=TLS_1_[23] cipherSuite=(?:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384|TLS_AES_128_GCM_SHA256) peerCertificates=\[CN=localhost\] localCertificates=\[\]}>
+",Security,cipher
+4882,NO,,,
+4942,YES,Slightly More Idiomatic StatusLine,Maintainability,idiomatic
+5067,NO,,,
+5147,YES,Idiomatic Kotlin in RecordedRequest.kt,Maintainability,idiomatic
+5174,NO,,,
+5330,NO,,,
+5350,NO,,,
+5442,NO,,,
+5465,NO,,,
+5525,NO,,,
+5570,NO,,,
+5586,NO,,,
+5591,YES,Failing with ANDROID_SDK_ROOT=/Users/yschimke/Library/Android/sdk ./gradlew :android-test:connectedCheck D8: MethodHandle.invoke and MethodHandle.invokeExact are only supported starting with Android O (--min-api 26) Caused by: com.android.builder.dexing.DexArchiveBuilderException: Failed to process /Users/yschimke/.gradle/caches/modules-2/files-2.1/software.amazon.cryptools/AmazonCorrettoCryptoProvider/1.1.1/a606679a20abcef643ad551bdd6793dba4a11213/AmazonCorrettoCryptoProvider-1.1.1-linux-x86_64.jar,Robustness,"Failing, exception"
+5597,NO,,,
+5611,NO,,,
+5623,NO,,,
+5707,YES,"Fix a regression closing WebSockets before connect; serverCloseThenClientClose - okhttp3.internal.ws.RealWebSocketTest
+
+java.lang.AssertionError: 
+Expecting empty but was:<[Closed[1000 Hello!]]>",Robustness,"Fix, error"
+5713,YES,"Since we have updated our Android app DAVx⁵ from okhttp 3.12.5 to 3.12.7, we start receiving these exceptions: java.util.concurrent.RejectedExecutionException:",Robustness,Exceptions
+5722,YES,"Broken okhttp-tls tests with conscrypt; okhttp3.tls.HandshakeCertificatesTest > platformTrustedCertificates FAILED
+    java.lang.StringIndexOutOfBoundsException:; okhttp3.tls.HeldCertificateTest > decodeMalformed FAILED
+    java.util.NoSuchElementException; ""They weren't flaky, just broken.""",Robustness,"broken, Failed, TLS"
+5729,YES,Add HTTP/2 and TLSv1.3 columns to our security providers doc,Security,"security, TLS"
+5748,NO,,,
+5754,NO,,,
+5762,NO,,,
+75,YES,Make timeouts work for SPDY,Performance,timeouts
+75,YES,"We can't use the regular socket timeouts because the
+socket is shared. Moving it to the application level
+is more complicated, but it allows different streams
+to set timeouts independently.","Performance
+Robustness","timeouts
+streams
+socket"
+116,YES,Automatic gzip + accept range don't interact well #116,Robustness,interact
+116,YES,We run into problems because we try to uncompress a partial document.,Robustness,problem
+129,YES,Move library into a module. Introduce sample module with simple GitHub c,Maintainability,"move
+module"
+214,YES,ClassCastException when using https,Robustness,ClassCastException
+214,YES,"I am getting the following. I believe the image is coming from https. It's not clear what if anything I did wrong here
+
+java.lang.RuntimeException: An unexpected exception occurred
+at com.squareup.picasso.Request$1.run(Request.java:106)
+at android.os.Handler.handleCallback(Handler.java:725)
+at android.os.Handler.dispatchMessage(Handler.java:92)
+at android.os.Looper.loop(Looper.java:137)
+at android.app.ActivityThread.main(ActivityThread.java:5041)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:511)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:793)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:560)
+at dalvik.system.NativeStart.main(Native Method)
+Caused by: java.lang.ClassCastException: com.squareup.okhttp.internal.http.HttpURLConnectionImpl cannot be cast to javax.net.ssl.HttpsURLConnection
+at com.squareup.okhttp.HttpResponseCache$Entry.(HttpResponseCache.java:517)
+at com.squareup.okhttp.HttpResponseCache.put(HttpResponseCache.java:259)
+at com.squareup.okhttp.HttpResponseCache$1.put(HttpResponseCache.java:153)
+at com.squareup.okhttp.internal.http.HttpEngine.maybeCache(HttpEngine.java:400)
+at com.squareup.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:648)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:390)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:339)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.getHeaderField(HttpURLConnectionImpl.java:186)
+at com.squareup.picasso.OkHttpLoader.load(OkHttpLoader.java:78)
+at com.squareup.picasso.Picasso.loadFromType(Picasso.java:364)
+at com.squareup.picasso.Picasso.resolveRequest(Picasso.java:240)
+at com.squareup.picasso.Picasso.run(Picasso.java:218)
+at com.squareup.picasso.Request.run(Request.java:100)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:390)
+at java.util.concurrent.FutureTask.run(FutureTask.java:234)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1080)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:573)
+at java.lang.Thread.run(Thread.java:856)
+at com.squareup.picasso.Utils$PicassoThread.run(Utils.java:267)",Robustness,"RuntimeException
+unexpected 
+exception"
+214,YES,"Yeah, looks like a bug in caching + cross-scheme redirects. Will fix very soon.",Robustness,"bug
+caching"
+220,YES,Failed connections if server closed Keep-Alive session,Robustness,"failed 
+connections"
+220,YES,"Hello
+
+Subsequent HTTP requests cause an EOFException if a previous keep-alive connection was re-used, but the server closed the connection in the mean time due to its own keep-alive timeout.
+
+java.io.EOFException
+at com.squareup.okhttp.internal.Util.readAsciiLine(Util.java:318)
+at com.squareup.okhttp.internal.http.RawHeaders.fromBytes(RawHeaders.java:301)
+at com.squareup.okhttp.internal.http.HttpTransport.readResponseHeaders(HttpTransport. java:130)
+at com.squareup.okhttp.internal.http.HttpEngine.readResponse(HttpEngine.java:629)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl. java:396)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.getResponse( HttpURLConnectionImpl.java:345)
+at com.squareup.okhttp.internal.http.HttpURLConnectionImpl.getResponseCode( HttpURLConnectionImpl.java:546)
+at de.spin.http.HttpRequest.call(HttpRequest.java:50)
+at de.spin.http.HttpRequest.call(HttpRequest.java:1)
+
+If a connection is not automatically repeatable (e.g. large POST), this is a bit annoying. I wonder whether there is a way that okhttp could detect this itself? I don't know whether Android truly supports it, but maybe you could try reading zero bytes from the input stream when it's time to decide, whether the connection can still be re-used, and if it returns an EOF then, create a new connection/choose a different connections from the pool?",Robustness,"cause
+Exception
+EOF"
+220,YES,"Agreed.
+
+OkHttp tries to avoid the problem altogether. It closes streams on a timeout and confirms the OS thinks streams are readable and writable before they are used.
+
+It also tries hard to recover when this happens. It even employs an 8 KiB buffer to buy it some time between when the data is transmitted and when the failure is detected.
+
+If you have more ideas, I'd love to try 'em.",Robustness,"problem
+recover
+failure"
+220,YES,"Just tried to read 0 bytes, but it seems this is ""optimized"" somewhere in Java's network stack to just return 0 instead of actually checking whether the other end closed the connection. I forgot how crappy Java's original networking was over the last couple of years - NIO Selectors do not suffer from this problem, but converting to NIO is of course not an easy fix. I'll investigate further :-(
+",Robustness,"closed the connection
+checking
+problem
+"
+220,YES,"I fear there's no proper solution within the context of the old-style IO APIs. With non-blocking sockets and selectors, it's no big problem: You just select on all open sockets. Closed sockets will be marked readable, as soon as you try to read, you receive the -1 to signify connection end.  One could even use the selectors with the current system by using SocketChannels instead of Sockets. The major problem here is, that SocketChannels don't have the explicit Proxy support which Sockets have.  Without the proxy support, it's in fact possible to hack around the problem without rewriting the whole system to NIO-style by using BufferedInputStreams in any case and simply attempting a read with mark/reset",Robustness,"problem
+sockets
+connection"
+260,YES,Can't open OutputStreamWriter in Android 4.3,Robustness,
+260,YES,"The last line following code block crashes since upgrading to Android 4.3. The code has been running well on a 4.2 and earlier devices.
+
+        URL url = new URL(parms[0]);
+
+            OkHttpClient client = new OkHttpClient();
+
+        String requestStr = mTransaction.toRequestXml();
+        HttpURLConnection conn = client.open(url);
+        conn.setReadTimeout(15000 /* milliseconds */);
+        conn.setConnectTimeout(15000 /* milliseconds */);
+        conn.setRequestMethod(""POST"");
+        conn.setDoInput(true);
+        conn.setDoOutput(true);
+        conn.setChunkedStreamingMode(1); //Arbitrary length for chunks
+
+    OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream());",Robustness,crashes
+260,YES,Crashes how? Stack trace or logcat log?,Robustness,crashes
+260,YES,"The app hangs for about 20 seconds while it tries to open the streamwriter. An IOException is thrown with no trace information in the console or logcat. Should be very easy to duplicate.
+
+PixelMEDIA®
+Joe Pescatello, Application Developer
+web: www.pixelmedia.com<www.pixelmedia.com > | direct: 603.957.4849 | email: jpescatello@pixelmedia.commailto:jpescatello@pixelmedia.com
+
+From: Jesse Wilson [mailto:notifications@github.com]
+Sent: Wednesday, July 31, 2013 10:33 AM
+To: square/okhttp
+Cc: Joe Pescatello
+Subject: Re: [okhttp] Can't open OutputStreamWriter in Android 4.3 (#260)
+
+Crashes how? Stack trace or logcat log?
+
+—
+Reply to this email directly or view it on GitHubhttps://github.com//issues/260#issuecomment-21866994.",Robustness,"hangs
+Exception
+thrown
+trace"
+260,YES,"Are you doing this on the main thread? Saying ""the app hangs"" is usually
+indicative of doing so. Networking should always be done on a background
+thread.",Robustness,hangs
+293,NO,N/A,N/A,N/A
+313,YES,"This requires an API change somewhere beyond just OkHttpClient. In order to get the SocketFactory to the invocation site a change has to be made in Connection, Route, or Address. Currently the SSLSocketFactory, along with other objects from OkHttpClient come in via the constructor of Address so I'm inclined to follow suit.",maintainability,change
+313,YES,"Hmmm. The system properties are completely legacy and bad. I think we want to give you an API to create and customize your own sockets, but that isn't going to be ready for a while. Do you mind forking the project for the next ~6 months or so 'til we're ready to expose the API you really want?
+",maintainability,"legacy
+bad"
+343,YES,I was getting a protocol exception when trying to send a PATCH with a body. Made some minor changes to allow PATCH to have a body just like PUT and POST.,Robustness,exception
+364,YES,"Send a post request, the content-length header is not set, this cause an error from spdy server. Is this known issue?",Robustness,error
+364,YES,"I think it is usually the case that HttpURLConnection sets content-length on POST.
+
+@swankjesse any thoughts about implicitly setting content-length on POST over spdy?",Robustness,
+429,NO,N/A,N/A,N/A
+432,YES,Use thread names everywhere.,maintainability,names
+432,YES,"Sometimes we name a thread both via its ExecutorService
+and via a NamedRunnable. The ExecutorService thread needs
+to be named because threads are cached and will be visible
+in a thread dump even when no runnables are running.
+
+NamedRunnables are also used because they provide additional
+context: the host or URL being serviced by a thread.",maintainability,"named
+visible"
+567,YES,Unexpected SocketTimeoutException #567,Robustness,exception
+567,YES,"The problem here is that a simple DataInputStream.readInt() triggers a SocketTimeoutException even though it shouldn't - the network is good (wifi) and the server is responsive.
+
+Digging into this issue, I have localized the issue to code inside com.squareup.okhttp.internal.spdy.SpdyStream.SpdyDataInputStream.receive(InputStream in, int byteCount):
+
+The problem is that Util.readFully(in, buffer, limit, firstCopyCount); can take a long time, say longer than 10s. This means that it takes that much until SpdyStream.this.notifyAll(); is called. Furthermore, com.squareup.okhttp.internal.spdy.SpdyStream.SpdyDataInputStream.waitUntilReadable() is waiting on notifyAll() to be called. If it's not called after readTimeoutMillis(set to 10s) it times out and throws the unexpected SocketTimeoutException posted above. I've copied waitUntilReadable() below:
+
+You might be thinking 'what's the problem?'. Nothing happened for 10s so a timeout makes sense. Except for the fact that stuff is happening, only in Util.readFully(in, buffer, limit, firstCopyCount);. That's where data is actually read (successfully, but slowly) from the input stream / network.
+
+So if 30KB (realistic) are being read from the network, at 2KB/s, a SocketTimeoutException will always be thrown. Technically, this would be fine since the timeout is specified at 10s. However, note that only a simple readInt() was called but that resulted in 30KB being read from the network - this is an issue, which I'm not yet sure whether it is due to an issue inside okhttp or due to compression (say 30KB are required to decompress the first int).
+Importantly, there is no way to distinguish between 'no network or server not responding' and 'connection is slow' since they are governed by the same timeout. Could that be added? (Or is there already a way to do this that I should know about?)","Robustness
+Peformance","exception
+issue
+thrown
+
+long time
+timeout
+slow"
+567,YES,"I updated to the latest commit - 7b10692. However, I cannot test whether the bug is fixed since I hit the following exception in a code path that is precursor to where I can reproduce the bug:
+
+Caused by: javax.net.ssl.SSLException: Write error: ssl=0x601c1640: I/O error during system call, Broken pipe
+    at org.apache.harmony.xnet.provider.jsse.NativeCrypto.SSL_write(Native Method)
+    at org.apache.harmony.xnet.provider.jsse.OpenSSLSocketImpl$SSLOutputStream.write(OpenSSLSocketImpl.java:706)
+    at okio.Okio$1.write(Okio.java:70)
+    at okio.RealBufferedSink.flush(RealBufferedSink.java:137)
+    at com.squareup.okhttp.internal.http.HttpConnection$ChunkedSink.flush(HttpConnection.java:309)
+    at okio.RealBufferedSink.flush(RealBufferedSink.java:139)
+    at okio.RealBufferedSink$1.flush(RealBufferedSink.java:113)
+    ... 11 more
+This seems to be a real bug within okio/okhttp, right? Any steps to investigate further into this?
+And an important note - to get okio and okhttp to compile within our project which doesn't use Java 7, I modified the following:
+
+diff --git a/okhttp/src/main/java/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl.java b/okhttp/src/main/java/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl.java
+index 358ec95..28a0830 100644
+--- a/okhttp/src/main/java/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl.java
++++ b/okhttp/src/main/java/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl.java
+@@ -63,15 +65,7 @@ public final class HttpsURLConnectionImpl extends DelegatingHttpsURLConnection {
+     return delegate.client.getSslSocketFactory();
+   }
+
+-  @Override public long getContentLengthLong() {
+-    return delegate.getContentLengthLong();
+-  }
+-
+   @Override public void setFixedLengthStreamingMode(long contentLength) {
+     delegate.setFixedLengthStreamingMode(contentLength);
+   }
+-
+-  @Override public long getHeaderFieldLong(String field, long defaultValue) {
+-    return delegate.getHeaderFieldLong(field, defaultValue);
+-  }
+ }
+diff --git a/okhttp/src/main/java/com/squareup/okhttp/internal/http/ResponseCacheAdapter.java b/okhttp/src/main/java/com/squareup/okhttp/internal/http/ResponseCacheAdapter.java
+index 9d6eb22..f4e95af 100644
+--- a/okhttp/src/main/java/com/squareup/okhttp/internal/http/ResponseCacheAdapter.java
++++ b/okhttp/src/main/java/com/squareup/okhttp/internal/http/ResponseCacheAdapter.java
+@@ -526,17 +528,9 @@ public class ResponseCacheAdapter implements OkResponseCache {
+       throw throwRequestSslAccessException();
+     }
+
+-    @Override public long getContentLengthLong() {
+-      return delegate.getContentLengthLong();
+-    }
+-
+     @Override public void setFixedLengthStreamingMode(long contentLength) {
+       delegate.setFixedLengthStreamingMode(contentLength);
+     }
+-
+-    @Override public long getHeaderFieldLong(String field, long defaultValue) {
+-      return delegate.getHeaderFieldLong(field, defaultValue);
+-    }
+   }
+
+   private static RuntimeException throwRequestModificationException() {
+diff --git a/okio/src/main/java/okio/DeflaterSink.java b/okio/src/main/java/okio/DeflaterSink.java
+index e3a7cab..e27d4bc 100644
+--- a/okio/src/main/java/okio/DeflaterSink.java
++++ b/okio/src/main/java/okio/DeflaterSink.java
+@@ -15,11 +15,10 @@
+  */
+ package okio;
+
++import static okio.Util.checkOffsetAndCount;
++
+ import java.io.IOException;
+ import java.util.zip.Deflater;
+-import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement;
+-
+-import static okio.Util.checkOffsetAndCount;
+
+ /**
+  * A sink that uses <a href=""http://tools.ietf.org/html/rfc1951"">DEFLATE</a> to
+@@ -68,7 +67,6 @@ public final class DeflaterSink implements Sink {
+     }
+   }
+
+-  @IgnoreJRERequirement
+   private void deflate(boolean syncFlush) throws IOException {
+     OkBuffer buffer = sink.buffer();
+     while (true) {
+This is why I didn't directly file a new bug. However I don't think these modifications have anything to do with the SSLException exception above since I've only removed unused Java 7 APIs and an annotation. But I might be wrong.
+
+Also, thank you for being so responsive!",Robustness,exception
+578,YES,Fix route failure recovery for HTTP/2 #578,Robustness,"failure
+recuvery"
+578,YES,"As awkwardly demonstrated in HttpOverSpdyTest.readResponseHeaderTimeout, we attempt to recover from timeouts on SPDY connections. But these timeouts are not connectivity problems; they're application-layer timeouts.  
+
+The test passes, even though we only ever establish a single SPDY connection to the server. This is two mistakes canceling each other out. 
+
+When we have an application-layer SPDY timeout, we shouldn't treat it as a connectivity problem and retry. When we have a socket-layer SPDY timeout, we should treat it as a connectivity problem.",Robustness,cancel
+585,NO,N/A,N/A,N/A
+586,YES,Don't blame modern TLS when a pooled connection fails,Security,TLS
