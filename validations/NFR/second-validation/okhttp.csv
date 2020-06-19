@@ -1,0 +1,452 @@
+Issue Number,HAS_NFR,PHRASE,NFR,KEYWORDS
+56,TRUE,"""New API to break platform-specific dependencies."", ""errors in Android apps.""",Robustness,"""break"", ""errors"""
+61,TRUE,"""response cache policy"", ""different response caches"", ""resource"", ""build machine problem""","Robustness, Performance","""response"", ""policy"", ""caches"", ""resource"", ""build"", ""problem"""
+63,TRUE,"""This saves clients from needing to cast to HttpsURLConnection""",Performance,"""saves"""
+74,FALSE,N/A,N/A,N/A
+78,TRUE,"""the duplication of libcore utiliyu classes"", ""There isn't too much that's duplicated""",Maintainability,"""duplication"", ""duplicated"""
+80,TRUE,"""The net result is that if some thread stops reading its response, we end up needing to buffer an unbounded amount of data.""",Performance,"""response"", ""buffer"", ""unbounded amount of data"""
+118,FALSE,N/A,N/A,N/A
+120,TRUE,"""The API is imperfect because HttpURLConnection doesn't expose
+ any SSL information, and because HttpsURLConnection won't necessarily
+ have a secure final request.""",Security,"""expose"", ""secure"" ""request"""
+125,FALSE,N/A,N/A,N/A
+134,FALSE,N/A,N/A,N/A
+153,TRUE,"""Recover from failures while writing a POST body"", ""This introduces failure recovery in the output stream. It means
+ we should be able to recover from any kind of failure that could be triggered by aggressive connection pooling.""",Robustness,"""recover"", ""failures"", ""failure"", ""aggressive"""
+197,TRUE,"""Also correct end-of-method fallback logic to not check for the presence of the MTU method, it will never be null when code is reached.""",Robustness,"""correct"", ""logic"", ""check"", ""never"", ""null"""
+233,FALSE,N/A,N/A,N/A
+235,TRUE,"""Cache all non-standard date format instances lazily."", ""force invalid dates to potentially wait a bit"", ""Pushed an update which eliminates thread locals for fallback formats. Just caches the date format itself with synchronization. "", ""synchronizing on Strings is particularly dangerous because strings are interned by the VM""",Robustness,"""non-standard"", ""format"", ""force"", ""invalid"", ""thread"", ""formats"", ""synchronization"", ""synchronizing"", ""dangerous"""
+276,TRUE,"""Hide the async APIs (package-private), moving test code to
+ the same package as necessary.""",Maintainability,"""moving"" ""code"""
+277,TRUE,"""Support multiple variants of the SPDY protocol.""",Robustness,"""Support"" ""variants"""
+280,TRUE,"""This won't work for HTTP/2.0, which has its
+ own flag setup."", ""Checkstyle error. """,Robustness,"""work"", ""error"""
+287,TRUE,"""Read HTTP/2.0 frames and error codes"", ""This introduces a new ErrorCode class that identifies codes for HTTP/2.0, SPDY/3 RST codes, and SPDY/3 GO_AWAY codes.""",Robustness,"""error"", ""ErrorCode"""
+306,TRUE,"""SPDY is a bit more strict because it
+ relies on redundancy; it's an error to send a SYN_REPLY after a
+ HEADERS frame. With HTTP/2.0, there's only one type so there's
+ no error to detect.""",Robustness,"""redundancy"", ""error"", ""detect"""
+307,TRUE,"""fix various bugs observed during android platform
+ testing."", ""We don't have to wait for the request to be sent
+ before allowing inspection of SSL certs."", ""Respect read timeout on recycled connections.""","Robustness, Performance","""fix"", ""bugs"", ""wait"", ""timeout"""
+309,FALSE,N/A,N/A,N/A
+374,TRUE,"""Hey I'm back with the small packet issue as I found that the Buffered Stream wrapper was implemented after SpdyConnection set up which cause it did not work.""",Robustness,"""packet"", ""issue"", ""implemented after"", ""did not work"""
+379,TRUE,"""This breaks support for java.net.ResponseCache implementations."", ""That API is akward and can't support important features like conditional GETs and hit tracking."", ""The response is persisted to the cache as-is"", ""The annotation is what causes the strikethrough style in IDEs."", ""they added the @Deprecated annotation.""",Robustness,"""breaks"", ""can't support"", ""persisted"", ""strikethrough"", ""Deprecated"""
+380,TRUE,"""This introduces a new, poorly-named class ResponseStrategy
+ that pulls some code out of ResponseHeaders"", ""That was necessary
+ because the old method mutated itself and its parameters in
+ place.""",Maintainability,"""introduces"", ""old method"", ""mutated"""
+381,TRUE,"""This cleans up a lot of the unnecessary moving parts in
+ HttpEngine. That class is still stuck with some complexity
+ around request and response bodies, but it's getting better.""",Maintainability,"""cleans up"", ""unnecessary"", ""moving parts"", ""complexity"""
+383,TRUE,"""Policy is a bridge to get us from a place where HttpEngine depends 100% on HttpURLConnection to a place where it doesn't"", ""We've refactored the code in HttpEngine enough now that some Policy methods are no longer necessary""",Maintainability,"""depends"", ""refactored the code"", ""no longer necessary"""
+384,FALSE,N/A,N/A,N/A
+387,TRUE,"""Improve cache strategy"", ""This renames ResponseStrategy to CacheStrategy and cleans up the code that calls into it"", ""This fixes a bug where we were incorrectly reporting stats when the caller was requesting only-if-cached""",Performance,"""cache"", ""ResponseStrategy"", ""CacheStrategy"" ""reporting stats"""
+388,TRUE,"""Move gateway timeout failures to CacheStrategy, and inline methods nearby for a strict top-to-bottom flow in this method.""",Performance,"""timeout failures"""
+390,FALSE,N/A,N/A,N/A
+391,FALSE,N/A,N/A,N/A
+399,FALSE,N/A,N/A,N/A
+413,FALSE,N/A,N/A,N/A
+423,TRUE,"""This approach not only makes HeaderEntry immutable, but it is far more efficient.""",Performance,"""efficient"""
+430,TRUE,"""Fix a bug where discardStream took way too long"", ""We were relying on the socket timeout of a single read, but performing multiple reads each with independent timeouts.""",Performance,"""too long"", ""timeout"", ""timeouts"""
+431,FALSE,N/A,N/A,N/A
+438,TRUE,"""consolidate protocol constants"", ""Changed all internal use of NPN protocol identifier strings to use a corresponding value a new public enum: Protocol""",Maintainability,"""consolidate"", ""new"""
+454,FALSE,N/A,N/A,N/A
+460,FALSE,N/A,N/A,N/A
+462,FALSE,N/A,N/A,N/A
+469,TRUE,"""This fixes 2 issues which could lead to corrupt connections, and are the base for implementing push promise"", ""We were ignoring the priority flag, which could lead to accidentally reading priority as a part of the header block""",Robustness,"""fixes"", ""issues"", ""corrupt"", ""connections"", ""accidentally"""
+471,FALSE,N/A,N/A,N/A
+484,FALSE,N/A,N/A,N/A
+485,FALSE,N/A,N/A,N/A
+490,TRUE,"""found some more flakiness in URLConnectionTest, polishing a bit more""",Robustness,"""flakiness"""
+492,TRUE,"""More buffer stuff: deadlines, indexOf and read"", ""spending my 2014 budget of do/while loops right here.""",Performance,"""buffer"", ""budget"", ""loops"""
+495,FALSE,N/A,N/A,N/A
+496,FALSE,N/A,N/A,N/A
+510,FALSE,N/A,N/A,N/A
+514,FALSE,N/A,N/A,N/A
+517,TRUE,"""Fix some OkBuffer bugs"", ""Moving bytes between buffers crashed when the destination
+ was empty and the source was a prefix."", ""Moving bytes between buffers crashed when the destination
+ was empty and the source was a prefix"", ""InputStream reading returned values in -128..127 instead
+ of in 0..255.""",Robustness,"""Fix"", ""bugs"", ""crashed"", ""crashed"", ""instead"""
+519,TRUE,"""nice post condition check""",Robustness,"""condition check"""
+523,FALSE,N/A,N/A,N/A
+527,FALSE,N/A,N/A,N/A
+532,TRUE,"""Once this is merged I can follow up by making HttpConnection responsible for its own pooling rather than relying on HttpEngine to do that work.""",Security,"""responsible"""
+534,FALSE,N/A,N/A,N/A
+535,TRUE,"""Fix some bugs, such as decoding of input that contains lots of padding or whitespace."", ""Improve performance by correctly guessing the output array size whenever the input doesn't contain whitespace."", ""Are we able to optimize this case if we know it's going into a ByteString?""","Robustness, Performance","""Fix"", ""bugs"", ""performance"", ""optimize"""
+549,FALSE,N/A,N/A,N/A
+551,FALSE,N/A,N/A,N/A
+553,FALSE,N/A,N/A,N/A
+555,TRUE,"""This was a bug"", ""Adding synchronized fixes a bug."", ""another bug"", ""one last bug""",Robustness,"""bug"", ""fixes"""
+558,FALSE,N/A,N/A,N/A
+563,FALSE,N/A,N/A,N/A
+566,TRUE,"""thread unsafe."", ""Oh brilliant, you did do the safe thing. That serves me right for commenting before I read the whole file."", ""actually, this should probably be an assertion error. It is a programming bug to send a push frame from the client. wdyt?"", ""Yeah, an IllegalArgumentException seems appropriate.""","Security, Robustness","""unsafe"", ""safe"", ""assertion error"", ""programming bug"", ""IllegalArgumentException"""
+587,TRUE,"""good idea doing a while, it removes special casing zero""",Robustness,"""removes special casing"""
+590,FALSE,N/A,N/A,N/A
+619,FALSE,N/A,N/A,N/A
+637,TRUE,"""Fix a crash on conditional cache hits for new API"", ""The problem was caused by a bad test that specified Content-Length: 0 for a 304, which isn't appropriate.""",Robustness,"""Fix"", ""crash"", ""problem"", ""isn't appropriate."""
+645,FALSE,N/A,N/A,N/A
+652,TRUE,"""More expensive, but more importantly more correct implementation of HPACK"", ""Previously, we were not immediately emitting headers that were toggled back on in a later header block. This caused a problem because during eviction, where we would lose the header.""",Robustness,"""more correct implementation"", ""problem"""
+672,TRUE,"""Fix for Android: old app-bundled OkHttp uses new HttpResponseCache""",Robustness,"""Fix"""
+687,FALSE,N/A,N/A,N/A
+694,FALSE,N/A,N/A,N/A
+704,FALSE,N/A,N/A,N/A
+714,FALSE,N/A,N/A,N/A
+730,FALSE,N/A,N/A,N/A
+739,FALSE,N/A,N/A,N/A
+744,TRUE,"""This isn't
+ very flexible because it means our challenge and credentials classes
+ must model everything.""",Maintainability,"""isn't very flexible"""
+748,TRUE,"""Fix a bug where the new API wasn't honoring SSL redirects properly."", "" we had a test that was testing that this broken behavior was working""",Robustness,"""Fix"", bug"", ""broken behavior"""
+749,TRUE,"""there's a lot of
+ nuance to the HTTP behavior, and a lot of state, but it isn't
+ obvious in the state of the objects doing the work., ""It also points out some potential problems with Job, where we don't handle method changes or cookies correctly. That's critical!"",",Robustness,"""nuance"", ""behavior"", ""problems"", ""critical"""
+763,FALSE,N/A,N/A,N/A
+764,TRUE,"""fail""",Robustness,"""fail"""
+783,TRUE,"""Use Okio for timeouts"", ""ah that explains the build fail.""",Robustness,"""timeouts"", ""build fail."""
+784,TRUE,"""Change HttpResponseCache to not implement java.net.ResponseCache."", ""This marks some methods as @deprecated and internal-only.""",Maintainability,"""Change"", ""deprecated."""
+793,FALSE,N/A,N/A,N/A
+802,TRUE,"""Reorder test to ensure call is canceled before its body is returned"", ""fix""",Robustness,"""ensure"", ""fix"""
+807,TRUE,"""Fix NPE on proxySelector.select""",Robustness,"""Fix"""
+817,FALSE,N/A,N/A,N/A
+819,FALSE,N/A,N/A,N/A
+836,FALSE,N/A,N/A,N/A
+874,TRUE,"""If network and cache are both null, the response source should be NONE.""",Robustness,"""both null"", ""should be"""
+923,TRUE,"""Use IOException in Callback failure method.""",Robustness,"""failure"""
+954,FALSE,N/A,N/A,N/A
+969,FALSE,N/A,N/A,N/A
+1046,FALSE,N/A,N/A,N/A
+1087,FALSE,N/A,N/A,N/A
+1089,TRUE,"""Expand the scope of TlsConfiguration to all connections""",Maintainability,"""Expand the scope"""
+1129,FALSE,N/A,N/A,N/A
+1143,TRUE,"""But we should buffer it for both SPDY and HTTP transports."", ""Also recover gracefully when retrying an empty POST body."" ""This
+ is a related bug.""",Robustness,"""we should"", ""recover"", ""bug"""
+1144,FALSE,N/A,N/A,N/A
+1193,FALSE,N/A,N/A,N/A
+1208,FALSE,N/A,N/A,N/A
+1219,FALSE,N/A,N/A,N/A
+1220,TRUE,"""the interceptor could inject a missing 'Cache-Control' header to make
+ caching work better.""",Performance,"""work better."""
+1229,TRUE,"""Normalize caching size in loop-local variable."", ""This was present in a bunch of loops, but not all and not consistently. After fixing two, I figured that I would normalize them all under the umbrella of uniformity and being lazy (only lookup up the value once if it never changes).""",Performance,"""caching size"", ""loop"", ""bunch of loops"", ""lazy"""
+1247,TRUE,"""Previously two OkHttpClients that shared a connection pool but used different proxy selectors could incorrectly share the pooled addresses.""",Robustness,"""incorrectly"""
+1256,TRUE,"""Limit 20 authorization attempts.""",Robustness,"""Limit"""
+1260,TRUE,"""Upon synchronous execution you are handed a WebSocket instance for synchronous writing and also pass in a WebSocketListener for async callbacks due to reading.""",Robustness,"""synchronous"""
+1267,FALSE,N/A,N/A,N/A
+1270,FALSE,N/A,N/A,N/A
+1280,FALSE,N/A,N/A,N/A
+1282,FALSE,N/A,N/A,N/A
+1283,TRUE,"""Is volatile necessary here? I fear this might be a pessimization with volatile, since we're invalidating CPU caches. (And we can implement this correctly without it.)""",Robustness,"""volatile"", ""invalidating"", ""CPU caches"""
+1289,TRUE,"""Clean up time-based APIs for throttle and delay.""",Performance,"""time-based"", ""throttle"", ""delay"""
+1291,TRUE,"""Body limit should be long""",Robustness,"""should be"""
+1295,TRUE,"""JDK 8 failure is a flake, and I'm ashamed that it was me who introduced it.""",Maintainability,"""failure"", ""introduced it"""
+1297,FALSE,N/A,N/A,N/A
+1308,TRUE,"""Fix ResponseCache handling for Android usecases"", ""This is a great idea, and will make future maintenance much easier!""","Performance, Maintainability","""ResponseCache"", ""maintenance"", ""easier"""
+1310,TRUE,"""Lazily initialize the cache""",Performance,"""Lazily"""
+1324,FALSE,N/A,N/A,N/A
+1332,FALSE,N/A,N/A,N/A
+1388,TRUE,"""Added"", ""Incompatible API"", ""Connection now handles all attempts to connect via a route"", ""failure is counted
+ against the route"", ""It is now more obvious which exceptions happen during
+ setup, connection, HTTP communication and thus which can be
+ retried and whether the request might have been sent.""","Maintainability, Robustness","""Added"", ""Incompatible"", ""handles"", ""failure"", ""exceptions"""
+1507,FALSE,N/A,N/A,N/A
+1563,FALSE,N/A,N/A,N/A
+1590,TRUE,"""Vary caching on Android"", ""the OkHttp caching
+ requires a networkResponse to check the vary headers and it was
+ not being provided, leading to a NullPointerException"", ""To avoid regressions the existing ResponseCacheTest has been
+ changed to use the real cache. Previously, the use of InMemoryResponseCache was hiding the Vary problem."", ""The ResponseCacheTest is now run with an AndroidShimResponseCache to prove the tests work with real cases. The case without the shim is covered with the CacheTest.""","Robustness, Performance","""networkResponse"", ""NullPointerException"", ""ResponseCacheTest"", ""InMemoryResponseCache"" ""problem"""
+1602,FALSE,N/A,N/A,N/A
+1619,FALSE,N/A,N/A,N/A
+1624,FALSE,N/A,N/A,N/A
+1625,FALSE,N/A,N/A,N/A
+1629,FALSE,N/A,N/A,N/A
+1663,FALSE,N/A,N/A,N/A
+1784,FALSE,N/A,N/A,N/A
+1786,FALSE,N/A,N/A,N/A
+1828,TRUE,"""Throw UnknownHostException again from HttpURLConnection""",Robustness,"""UnknownHostException"", ""HttpURLConnection"""
+1835,TRUE,"""Modify the various Delegating*SocketFactory implementations to return a *Socket from configureSocket() rather than assume configuration just modifies the object supplied. Improves flexibility and reduces the need to override multiple methods in some places.""",Maintainability,"""Modify"", ""modifies"", ""Improves flexibility"""
+1875,TRUE,"""This actually breaks the WebSocketEcho sample because echo.websocket.org is non-spec complaint"", ""we send an empty close frame which it omits from the frames it echoes back causing a ProtocolException by WebSocketReader"", ""he spec clearly allows this behavior so they're broken""",Robustness,"""breaks"", ""empty"", ""ProtocolException"", ""broken"""
+1876,TRUE,"""Introduce intermediate storage for frame contents."", ""we only emit bytes once Okio reports complete segments.""",Performance,"""intermediate"", ""emit bytes"""
+1877,FALSE,N/A,N/A,N/A
+1908,TRUE,"""Add a strict mode of sorts to InMemoryFileSystem to detect handle leaks.""",Performance,"""InMemoryFileSystem"""
+1959,TRUE,"""This was pretty broken, particularly around usernames and passwords containining characters like : and @.""",Robustness,"""broken"""
+1960,FALSE,N/A,N/A,N/A
+2020,TRUE,"""Fix HTTP/2 bug where we were using SPDY/3 style header concatenation."",",Robustness,"""Fix"", ""bug"""
+2101,FALSE,N/A,N/A,N/A
+2104,FALSE,N/A,N/A,N/A
+2112,FALSE,N/A,N/A,N/A
+2113,FALSE,N/A,N/A,N/A
+2126,TRUE,"""This prevents leaking request-specific configuration (the authenticator)
+ into shared connection configuration (the proxy authenticator).""",Security,"""leaking"", ""authenticator, ""shared connection"", ""proxy"", ""authenticator"""
+2162,FALSE,N/A,N/A,N/A
+2167,FALSE,N/A,N/A,N/A
+2177,TRUE,"""Refactor towards an OkHttpClient.Builder."", ""Still some work to do on method naming"", ""need to rename OkUrlFactory""",Maintainability,"""Refactor"", ""naming"", ""rename"""
+2185,TRUE,"""Detect API use errors earlier."", ""Previously we would accept invalid input, but crash when that invalid input
+ was used.""",Robustness,"""errors"", ""invalid"", ""crash"""
+2188,FALSE,N/A,N/A,N/A
+2195,FALSE,N/A,N/A,N/A
+2285,FALSE,N/A,N/A,N/A
+2299,FALSE,N/A,N/A,N/A
+2302,FALSE,N/A,N/A,N/A
+2353,TRUE,"""We had a bug on Android where the trust root index would return trusted
+ intermediate certificates when we called findTrustAnchorByIssuerAndSignature()."", ""Also permit that method to return null, as it does when the certificate
+ is not trusted.""",Robustness,"""bug"", ""return null"", ""not trusted"""
+2496,FALSE,N/A,N/A,N/A
+2499,FALSE,N/A,N/A,N/A
+2520,FALSE,N/A,N/A,N/A
+2540,FALSE,N/A,N/A,N/A
+2552,FALSE,N/A,N/A,N/A
+2572,TRUE,"""Better documentation and examples on closing response bodies.""",Maintainability,"""documentation"", ""examples"""
+2639,TRUE,"""When the application calls connect() we need to make an actual connection exist, with a TLS handshake, and return control to the calling thread before transmitting the request body."", ""The Call API doesn’t let us do this, so I cheat by using an extra thread."", ""When the application wants to stream the request body, we again need to return control to the caller in a place where the Call API won’t let us.""",Performance,"""thread"""
+2647,FALSE,N/A,N/A,N/A
+2658,FALSE,N/A,N/A,N/A
+2659,TRUE,"""Fix OkHttpURLConnection to not swallow unexpected exceptions."", ""prevent exceptions"", ""the underlying problem is that Callback.onFailure() expects an IOException"", ""If any other kind of exception prevents a response from being delivered, Callback.onFailure() is never called"", ""This is generally legit – the program has crashed"", ""But in this case it’s surprising that a synchronous call never receives a response.""",Robustness,"""Fix"", ""unexpected"", ""exceptions"", ""prevent exceptions"", ""problem"", ""Callback.onFailure()"", ""exception"", ""Callback.onFailure()"", ""never called"", ""crashed"", ""never receives a response."""
+2688,TRUE,"""Java9 tests""",Robustness,"""tests"""
+2689,FALSE,N/A,N/A,N/A
+2703,FALSE,N/A,N/A,N/A
+2722,FALSE,N/A,N/A,N/A
+2751,FALSE,N/A,N/A,N/A
+2765,FALSE,N/A,N/A,N/A
+2804,FALSE,N/A,N/A,N/A
+2818,TRUE,"|""Fix conditional cache hits to update timestamp fields.""",Robustness,"""Fix"", ""cache hits"""
+2833,FALSE,N/A,N/A,N/A
+2835,TRUE,"""Modify for-loop more performance sensitively"", |""I happen to find one for-loop"", ""I thought first one wasted more memory than 2nd one.",Performance,"""for-loop"", ""performance"", ""memory"""
+2852,FALSE,N/A,N/A,N/A
+2863,TRUE,"""Remove connection read/write timeouts for web sockets."", ""Sorry to revisit a merged PR but how should we handle remote servers going down with infinite read timeouts? There seems no way other than tuning TCP stack for established connections to be timed out in this case?"", ""You could send pings on regular intervals, at the rate at which you care
+ about timeouts (e.g., every 30 seconds).""",Performance,"""timeouts"", ""infinite"" ""timed out"", ""pings"", ""intervals"", ""seconds"""
+2904,FALSE,N/A,N/A,N/A
+2995,TRUE,"""Avoid sending empty HTTP/2 data frames when there is no request body.""",Performance,"""sending empty"", ""no request"""
+3000,TRUE,"""Apply timeouts within individual frames"", Reads need to not time out even if the peer isn't writing new frames"", ""Writes need to time out if the peer isn't reading existing frames""",Performance,"""timeouts"", ""time out"""
+3125,FALSE,N/A,N/A,N/A
+3331,FALSE,N/A,N/A,N/A
+3408,FALSE,N/A,N/A,N/A
+3410,FALSE,N/A,N/A,N/A
+3960,TRUE,"""Defer StreamResetException until response body buffer is fully read."", ""We rely on the application layer to read the response body buffer before sending WINDOW_UPDATE's.""",Performance,"""response"", ""buffer"""
+4116,TRUE,"""Add parse overload which fails on invalid inputs""",Robustness,"""fails"", ""invalid"""
+4127,FALSE,N/A,N/A,N/A
+4314,FALSE,N/A,N/A,N/A
+4359,FALSE,N/A,N/A,N/A
+4488,FALSE,N/A,N/A,N/A
+4508,FALSE,N/A,N/A,N/A
+4550,TRUE,"""Core TLS features are now non-optional on Android""",Maintainability,"""are now"""
+4613,TRUE,"""This is a mechanical refactoring that changes all code that directly accesses a StreamAllocation to instead access a Transmitter. The next step is to combine StreamAllocation and Transmitter into a single class.""",Maintainability,"""refactoring"", ""changes"""
+4627,TRUE,"""Handle stream exceptions in Transmitter"", ""This changes failure recovery to only attempt when the failure occurs when OkHttp is doing I/O"", ""If a failure is triggered by something else (such as a bad RequestBody or Interceptor) then that failure will not be retried"", ""This has been a pretty huge refactoring. I’ve been rearranging responsibilities between connections, stream allocations, codecs, and interceptors"", ""rename"", ""move""","Maintainability, Robustness","""exceptions"", ""changes"", ""failure"", ""recovery"", ""retried"", ""refactoring"", ""rearranging"", ""rename"", ""move"""
+4629,TRUE,"""The refactoring isn't totally complete, but this should be the last
+ big one.""",Maintainability,"""refactoring"""
+4715,FALSE,N/A,N/A,N/A
+4793,FALSE,N/A,N/A,N/A
+5215,TRUE,"""Allow users to set status code 0 in Response to maintain backward compatibility""",Robustness,"""compatibility"""
+49,TRUE,This will make it easier to fix fallback when a single domain has multiple IP addresses and some of those addresses are not reachable.,Maintainability,"""make it easier to"""
+70,TRUE,This update adds some asserts to prevent synchronization errors.,Robustness,"""synchronization errors"""
+255,TRUE,"This caused the response cache to break, since it was parsing lines like ':status: 200 OK' by splitting on the first colon.
+The fix drops these synthetic headers as soon as they're received; converting them to the HTTP form immediately.",Robustness + Performance,"robustness: ""break""
+performance: ""caching"", ""immediately"""
+356,TRUE,This adjusts currently implemented code to be in compliance with http/2 draft 6 headers continuations.,Maintainability,"""in compliance with"""
+458,TRUE,The result is a savings of 3-5 allocations and 72-144 bytes overhead per direction (request/response) per connection when between 1 and 128 headers are tracked.,Performance,"""overhead"""
+494,TRUE,"For what it's worth, my work optimizing Gson taught me that operating on locals instead of fields for tight loop stuff is worth while. I'm anticipating that this will be tight-loop stuff.",Performance,"""optimizing"""
+516,TRUE,Rename byteAt to getByte.,Maintainability,"""rename"""
+533,TRUE,"Move connection reuse to HttpConnection, with policy informed by HttpEngine. It specifies what to do when the connection becomes idle: pool, close or hold. The connection does what it's told.",Maintainability,"""move"" + ""to"", ""policy"", ""does what it's told"""
+705,TRUE,Go by header index. Much faster and it retains header order.,Performance,"""faster"""
+921,TRUE,Tidy up recipes.,Maintainability,"""tidy up"""
+1171,TRUE,This is an unusual case that would occasionally cause failures on Android when a ResponseCache was installed.,Robustness,"""failures"""
+1345,TRUE,I get these failures when I run locally without my changes,Robustness,"""failures"""
+1708,TRUE,Rename 'spdy' references to 'framed' where appropriate.,Maintainability,"""rename"""
+2366,TRUE,"Gracefully recover from a failure to trim cache to size.
+Maybe rename to mostRecentTrimFailed ?",Robustness + Maintainability,"Robustness: ""recover"", ""failure""
+Maintainability: ""rename"""
+2583,TRUE,"Previously, this would cause an exception because the body was being ignored.",Robustness,"""exception"""
+2664,TRUE,Split HttpEngine into 3 interceptors.,Maintainability,"""split"" + ""into"""
+73,YES,"""This avoids a memory leak; we don't hold onto the input stream
+and it's large 64 KiB buffer long after that stream is done.""","Performance, Robustness","""memory"" + ""leak"""
+132,NO,,,
+239,YES,"""New class! Name recommendations?""",Maintainability,"""class"" + ""name"""
+266,YES,"""prefer to return ""localhost"" just because sometimes a stale VPN config can screw up, and failing is severe.""",Robustness,"""failing"", ""screw"" + ""up"""
+439,YES,"""In preparation for addition of ALPN, which would add a
+third class, where inheritance starts to break.""",Maintainability,"""preparation"", ""addition"""
+539,YES,"""With this change, a sample caliper bench of spdy/3.1 on my laptop recovered 13 requests per second with concurrency set to 10 and body size 1048576.""",Performance,"""per"" + ""second"""
+550,YES,"This means OkBuffer implements these interfaces directly.
+That's much simpler for code that sometimes wants to access
+an in-memory OkBuffer and sometimes wants to access an
+I/O backed stream like a socket.
+
+glad we can expose BufferedSource/Sink even if we don't OkBuffer. The buffered source/sink concept is very reusable across our codebase.",Maintainability,"""simpler"" + ""code"", ""reusable"""
+692,NO,,,
+1202,YES,"This operation is literally called ""Dynamic Table Size Update"", so renamed the message.",Maintainability,"""renamed"""
+1488,NO,,,
+1785,YES,"This includes potential security problems (newline characters) as well as
+simple non-ASCII characters including international characters and emoji.",Security,"""security"" + ""problems"""
+1995,NO,,,
+2391,NO,,,
+2648,YES,"Previously we had an awkward, arbitrary separation because RealCall contained
+the stuff that wasn't in HttpURLConnection, and HttpEngine contained everything
+that was shared.
+
+It was also awkward because HttpEngine could be interrupted in various parts
+of the HttpURLConnection flow: after connecting, while transmitting the request
+body, etc. With this change we no longer need to handle API calls while we're
+in these intermediate states, which means we can reduce the scope of certain
+things from fields to local variables.
+
+There's still a way to go here but this is more easy wins.",Maintainability,
+3207,YES,"Are there any other edge cases/attacks you can think of, particularly specific to OkHttp? The SAN, DNS and pinning checks should do a good job that you can't use it to reroute traffic without client and server both allowing.",Security,"""attacks"",  ""pinning"""
+4626,YES,"skipConnectBody is a nice simplification.
+Thanks! Definitely having a huge test suite is a big win here, especially tests that confirm connections are properly pooled.",Maintainability,"""simplification"", ""test"" + suite"
+69,TRUE,These were suppressed because they needed a bit of work; I did that work and now they pass.,Maintainability,"Pass, work, bug"
+238,,Support streaming request bodies longer than 2 GiB,Performance,"bodies, streaming"
+377,TRUE,Using HttpEngine directly introduces some duplicated code with HttpURLConnection. It also breaks the response cache. I think this is the best route going forward; and eventually we could invert this relationship to have HttpURLConnection depending on Job directly rather than vice versa.,Maintainability,"Cache, HttpEngine, HttpEngine"
+656,TRUE,…onseCache This is required for interoperability between HttpResponseCache with Java's HttpURLConnection and some scenarios on future Android with Java's HttpURLConnection and some scenarios on future Android releases where an app has bundled an older version of OkHttp that uses the ResponseCache API.,Perfomance,"onseCache, HttpResponseCache, HttpURLConnection"
+741,FALSE,,,
+752,TRUE,We don't buffer response bodies in the new API. But we should retransmit POST bodies when a request fails.,Security,"Request, fail."
+1178,TRUE,"When the preferred Android network changes from
+cell -> wifi or wifi -> cell the HTTP connection
+pool in use is abandoned to avoid reuse of
+connections on the old network. This was added
+in commit 8bced3e.
+
+The design for the connection pool was such that
+continuous use of the connection pool was required to
+clean up idle / expired connections. If a connection
+pool becomes idle (as when it is dereferenced on a
+network change) it is possible for some connections
+to remain in the pool indefinitely.
+
+After the preferred network change, because the old
+connection pool was no longer referenced the pool
+would be garbage collected and Android's ""Strict Mode""
+would complain about sockets not being closed.
+
+The only existing way to avoid this was to call
+""evictAll()"", which would have had issues when a
+large number of connections were returned to the pool
+after evictAll() was called. It also wouldn't work
+for SPDY connections which are shared but not reference
+counted, which makes knowing whether it is safe to
+close them difficult.
+
+The cleanModeRunnable serves two purposes:
+
+1) While scheduled / executing, it pins the connection
+pool in memory to avoid it being garbage collected.
+2) It continues to close connections (safely) until the
+pool is empty.
+
+If a connection is then added back to the pool the
+cleanModeRunnable is restarted.",Robustness,"Problems. network, connection, pool"
+1299,TRUE,"This is a small first step: Make RouteSelector independent
+of Connection so that it can later be moved inside of
+Connection. It puts the RouteSelector interface in terms
+of Routes, which seems logical.","
+Maintainability","Connection, Step"
+2080,TRUE,"There's a few places where OkHttp could leak a connection that needed to be
+closed. With our new connection pool model this is easier to find. This fixes
+two specific problems:
+ - too many redirects doesn't release the last used connection
+ - interceptors that throw runtime exceptions don't release the connection",Security,"Closed, Problems"
+2875,FALSE,,,
+99,No,,,
+382,No,,,
+419,Yes,This will help reduce allocation,Performance,reduce allocation
+457,No,,,
+486,Yes,sends half the limit on a stream or connection,Performance,stream
+669,Yes,"somewhat racy, given to the connection pool",Performance,racy
+743,Yes,This looks racy,Performance,racy
+911,No,,,
+1312,Yes,More classes will be added to this component to make Android maintenance easier,Maitainability,maintenance
+1500,No,,,
+1996,Yes,"certain threading orders would allow multiple calls to,  but they'll ultimately catch the IOException, Do multiple threads share a single client socket socket?","Performance, Robustness","threading, multiple calls, exception, multiple threads"
+2137,Yes,when a connect times out,Performance,when a connect times out
+2571,No,,,
+3134,Yes,Add charset support,Maitainability,charset
+4060,Yes,"Haven't done actual performance testing on this, but I'm theorizing it should be faster at the expense of more code",Performance,"faster, performance"
+5189,Yes,"can also do the uncaught exception handling, kills off concurrency in our test running, running this against a JVM singleton connectionPool","Robustness, Performance","uncaught exception, concurrency, connection pool"
+48,NO,N/A,N/A,N/A
+146,YES,Synchronize access to idleStartTimeNs.,Robusntess,"""synchronize"""
+194,NO,N/A,N/A,N/A
+208,NO,N/A,N/A,N/A
+236,NO,N/A,N/A,N/A
+279,YES,"My original point was just that if the only thing you're doing with this type is getting the charset out, you lose no type safety at all if you just turn it into a method.
+Anyway, I think I'm going to throw together a benchmark for CharMatcher vs. Pattern and the parsing.",Robustness + Performance,"Robustness: ""type safety""
+Performance: ""benchmark"""
+297,YES,"I wasn't able to reproduce the exact exception you saw, but my theory is that this bug was the cause.",Robustness,"""exception"""
+320,YES,Fix a race condition in Connection.isExpired().,Robustness,"""race condition"""
+396,YES,Re-using buffers can help avoid GC and make things run more smoothly when streaming data.,Performance,"""avoid GC"", ""run more smoothly"""
+411,YES,"Switch list iteration to index-based as it is more efficient on android.
+if you know of a better way for safe iteration here, or that safety isn't an issue, lemme know.",Performance + Robustness,"Performance: ""more efficient""
+Robustness: ""safe iteration"""
+428,YES,"OK, cleaned up style slightly and backfilled tests. We should merge this so twitter works.",Maintainability,"""cleaned up style"""
+470,YES,nit: client initiated --> client-initiated,Maintainability,"""nit:"""
+598,NO,N/A,N/A,N/A
+634,NO,N/A,N/A,N/A
+674,YES,"Support asynchronous disconnects by breaking the socket only, which should cause the thread using that socket to trigger clean-up.",Performance,"""asynchrohnous"""
+708,NO,N/A,N/A,N/A
+723,NO,N/A,N/A,N/A
+737,YES,Prevent leaking a Snapshot's InputStreams when metadata read fails.,Robustness,N/A
+759,YES,Making a few classes/interfaces within SPDY public ,Maintainability,"""make"" + ""public"""
+771,NO,N/A,N/A,N/A
+806,YES,"Yeah, this is difficult to parse visually.",Maintainability,"""parse visually"""
+887,YES,Move to a constant with a semantic name.,Maintainability,"""semantic name"""
+939,NO,N/A,N/A,N/A
+944,NO,N/A,N/A,N/A
+949,YES,provide a friendlier API for multipart forms. ,Maintainability,"""friendlier API"""
+1167,YES,More context when the hostname is not verified.,Maintainability,"""more context"""
+1204,NO,N/A,N/A,N/A
+1313,NO,N/A,N/A,N/A
+1348,NO,N/A,N/A,N/A
+1353,YES,"This prevents more threads from being created, harming overall concurrency for async requests.",Performance,"""concurrency"""
+1485,YES,"Use ExecutorService.execute, not ExecutorService.submit.",Maintainability,N/A
+1487,YES,Provide context on unexpected EOFs.,Maintainability,"""provide context"""
+1526,YES,"You should cache this object and return it if the caller calls source() multiple times.
+That way you cleanly separate one from the other.",Performance + Maintainability,"Performance: ""cache this""
+Maintainability: ""cleanly"""
+1529,YES,"Make badly-behaving caches cause a checked exception, not NPE",Maintainability,"""checked exception"""
+1555,YES,"Install an UncaughtExceptionHandler during tests; This is to make the tests more brittle around uncaught exceptions
+as they are on Android. No uncaught exceptions should escape.",Robustness,exceptions
+1596,YES,"Keep track of failures during negotiation for debugging; When performing TLS fallback, add previous exceptions to later ones as suppressed exceptions to help when debugging negotiation issues.; Results in output like this:
+
+SSLv3-only server, SSLv3 disabled:
+
+Caused by: javax.net.ssl.SSLHandshakeException: javax.net.ssl.SSLProtocolException: SSL handshake aborted: ssl=0xb81a4178: Failure in SSL library, usually a protocol error
+error:14077102:SSL routines:SSL23_GET_SERVER_HELLO:unsupported protocol; java.net.ConnectException: Connection refused; we do not retain exception information across routes, so if there are multiple routes and a later route fails for a different reason the first failures are ""lost"".; A follow up change could be made to retain prior RouteExceptions in HttpURLConnectionImpl (and Call) and add them as yet more suppressed exceptions to the IOException that is ultimately thrown (if any).","Robustness, Security","Robustness: failures, exceptions, error;
+Security: TLS, SSL"
+1621,YES,"Use lists to model paths and queries; The goal is that this will make accessing query parameters much
+easier.",Maintainability,easier
+2042,YES,"Use bogus pin that doesn’t throw an exception; ""sha1/BOGUSPIN"" throws an IllegalArgumentException because BOGUSPIN is not valid base64.",Robustness,exception
+2180,NO,,,
+2275,YES,"Add basic URLFilter for HttpURLConnection; This optional filter can be used to allow for blocking HTTP traffic to certain URLs, for example in order to prevent accessing sensitive content over HTTP instead of HTTPS.  this patch allows legacy clients using the HttpUrlConnection APIs to do basic blocking.; Is there a way we can make this UrlFilter interface non-public and expose this behavior only to AOSP?; We can make it package private to keep it AOSP only.; I made the OkUrlFactory.setUrlFilter method package private, that works fine for AOSP but will keep it from being publicly usable. The interface is still public since it is referenced by HttpURLConnectionImpl but I could move it into okhttp3.internal as well.",Security,"blocking, sensitive, HTTPS, expose, private, public"
+2325,YES,Support the GMS security provider when searching for the trust manager; Some older Android Devices may not have the Google Play Services SSL Provider,Security,"security, SSL"
+2403,NO,,,
+2471,YES,"fix NPE with okcurl insecure mode; Exception in thread ""main"" java.lang.NullPointerException",Robustness,"NPE, exception"
+2494,NO,,,
+2559,YES,Another approach to handling strange interceptor bodies.; The previous approach Just Works if users have fancy or interesting interceptors that genuinely need to swap the response body in an interceptor and keep the original body.; it also allows normal users to accidentally leak response bodies in their interceptors; This is an alternate solution that forbids the expert use case and requires that closing the response body stream also closes the underlying socket stream. It throws an exception if that implicit contract is not honored.; Don't crash when a stream hasn't been closed. ,Security,"leak, forbids, contract"
+2587,YES,"Don't crash reading non-ASCII characters from the server or the cache; they will most likely be mangled when they are decoded as UTF-8; his does prevent OkHttp from crashing when it encounters non-ASCII characters in headers for HTTP/2, SPDY, and cached responses.; I am still seeing this issue with OkHttp, version 3.6, and Retrofit 2.2.0. Here is my stacktrace: AndroidRuntime: FATAL EXCEPTION: OkHttp",Robustness,"crash, fatal, exception"
+2744,YES,"FileOperator, a utility for doing random access I/O with Okio; This is just the basics that I need for DiskLruCache2; Channels and input streams and sources all return as soon as they can because the next call could block.;  looking forward to DiskLruCache2 take form.",Performance,"cache, as soon as possible"
+2750,YES,"Relay. This is a single entry in the upcoming DiskLruCache2.; Metadata and stream data in one file. No locks held during file I/O or network I/O. Read from the buffer, the file, or the socket in that order.; Whenever a thread reads from upstream it’ll first configure upstream’s timeouts from its own timeouts. So if a thread has a 3 second timeout it’ll use that to read upstream, even if other waiting threads have longer or shorter timeouts.",Performance,"cache, locks, timeouts"
+2865,YES,"Robustness: onFailure callback's exception type widened to Throwable. This allows runtime exceptions from other callbacks to be passed along. Ensure the connection is closed properly for all failures. Fix and document the threading inside RealWebSocket. This ensures the listener is always called on the same thread and replies always happen from the correct thread.; OutOfMemoryError
+
+Maintainability: the changes to WebSocketRecorder make the tests read easy","Robustness, Maintainability","Robustness: failure, exception, error
+Maintainability: changes, easy"
+3069,YES,temporarily ignore failures with java 9; It looks like an issue introduced by Java 9; java.net.SocketException: Broken pipe (Write failed); javax.net.ssl.SSLHandshakeException: Received fatal alert: bad_certificate,Robustness,"failure, exception"
+3137,YES,"HUC regression test: disconnect in the middle of connecting; a HttpURLConnection.disconnect() in the middle of connecting caused an
+infinite loop.;concurrent disconnect should generally be supported (it is supported by HttpEngine) and this bug occurred even when the disconnect() happened in the same thread; The loop in HttpURLConnectionImpl.java:418 did not check for the disconnected state; immediately fails if already canceled; This bug was specific to HUC; The bug existed since at least OkHttp 2.7.5",Robustness,"bug, safe, "
+3149,NO,,,
+3161,YES,"Add error-prone compiler and fix its found issues.; Looks like error-prone only runs on JDK 8; , error-prone is based on JDK 9 which means it should support the new -release flag for targeting older platforms.",Robustness,"error, fix"
+3208,YES,HTTP/2 reject DATA frame on streamId is zero; okhttp client should treat it as connection error with type PROTOCOL_ERROR,Robustness,error
+3377,YES,"Avoid index out of bounds with Http/2 settings id in the experimental range; Currently HTTP/2 setting ids in the designated experimental range, #f000 to #ffff, cause an index-out-of-bounds exception when consumed by Http2Reader#readSettings, as readShort() interprets the bytes as negative integers. This expands the out-of-bounds check in Settings#set to check for a negative index. Without the code change, the added test fails, demonstrating the bug.",Robustness,"exception, fails, bug"
+3421,NO,,,
+4018,YES,"HttpClient 4.2.3 (GA) is a bug fix release; The timezone bug raised by the new version of error prone seems practically unlikely but technically legit.; [ERROR] /home/travis/build/square/okhttp/okhttp-urlconnection/src/test/java/okhttp3/UrlConnectionCacheTest.java:[1082,48] [InvalidTimeZoneID] Invalid time zone identifier. TimeZone.getTimeZone(String) will silently return GMT instead of the time zone you intended.
+",Robustness,"bug, fix, error, exception"
+4115,YES,Add ResponseBody factory overload for ByteString; We shouldn't punish people with a roundtrip through byte[] for using a superior type!,Maintainability,
+4291,YES,Fix exception message; The param name is file - not content. This may leads to confusing when observed in logs.,Maintainability,confuse
+4493,YES,"Ensure streams are removed from connection within test lifetime; After the recent fix, if the call is canceled while writing request headers, the stream is eventually removed from the connection. But this is done on a separate thread, and there was previously no guarantee that it would happen before tearDown() is called and the connection pool is evicted, preventing the connection from being evicted before the next test starts.
+
+Together with #4492, this will hopefully fix #4470.",Robustness,fix
+4677,YES,"Test for connection leaks in more tests; How does it fail when there is a bug causing the original test to fail, and also retaining connections? If there is a failed assertion inside a test and the test also retains connections, the test output will show both the assertion inside the test and the leak assertion.
+Without the change, the output shows the failed assertion inside the test and, sometimes a few minutes later, a leak assertion, when the first test that checks for leaks is executed.",Robustness,"fail, bug"
+4825,YES,Make error-prone validate missing override annotations,Robustness,
+4838,YES,"Log full exception on test failure; Too little information is logged today when tests fail in CI. This makes logging a little more verbose.
+
+",Robustness,"exception, failure"
+4848,YES,Convert CertificatePinner to a data class,Maintainability,
+4970,YES,"Fix race condition in RecordingHostnameVerifier; When connections are established concurrently, verify() sometimes throws a java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0 because of unsynchronized access to the calls list.",Robustness,exception
+5215,YES,Allow users to set status code 0 in Response to maintain backward compatibility in OkHttp4.0,Robustness,
+5339,YES,"Add TrustManager accessor to OkHttpClient.; We are able to access the SSLSocketFactory from the OkHttpClient but not the TrustManager used. Since there is no way to recover the used trust manager from the socket factory, we are adding explicit accessors.",Security,
+5434,YES,"Don't leak incoming bytes when we race incoming data and close; e had a bug where a race between FramingSource.receive() and FramingSource.close() could cause newly-received bytes to be absent from the flow control window. If this happens enough then eventually the connection will stall. Here’s the bug scenario:; This bug is insidious because it leaks a few bytes on the connection flow control window, and that only shows up hours after when the connection stalls.",Robustness,"bug, stalls"
