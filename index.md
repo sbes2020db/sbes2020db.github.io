@@ -95,3 +95,7 @@ title: On the Relation between Complexity, Explicitness, Effectiveness of Refact
 ## Results of the Manual Validations
 
 The results of the manual validations can be found in the following folder, divided into SAR and NFR validations, in CSV files. This folder is in the following link: [GitHub](https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/validations)
+
+## Data Set
+
+The data set used for this work is available in the following folder, divided into two zip files. One contains the extracted metrics for the projects, through Understand, while the other contains the extracted developer discussions through the GitHub API. This folder is in the following link: [OneDrive](https://1drv.ms/u/s!Akv4ikLFTtOtbxloCKdb1ejtCOw?e=eDc2vR)
