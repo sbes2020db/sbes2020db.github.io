@@ -91,3 +91,7 @@ title: On the Relation between Complexity, Explicitness, Effectiveness of Refact
 | "authentication" | "security" | "secure" | "malicious" |
 | "prevent" | "incorrect" | "harmful" | "state" |
 | "exception" | | |
+
+## Results of the Manual Validations
+
+The results of the manual validations can be found in the following folder, divided into SAR and NFR validations, in CSV files. This folder is in the following link: https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/validations
