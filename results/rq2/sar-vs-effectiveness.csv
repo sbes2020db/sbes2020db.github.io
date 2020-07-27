@@ -1,0 +1,9 @@
+Internal Quality Attribute,Presence of SAR,Negative Refactorings,Neutral Refactorings,Positive Refactorings
+Complexity,Has SAR,48,45,70
+Complexity,No SAR,371,513,625
+Cohesion,Has SAR,11,99,53
+Cohesion,No SAR,81,1104,324
+Coupling,Has SAR,68,46,49
+Coupling,No SAR,436,539,534
+Size,Has SAR,73,26,64
+Size,No SAR,546,292,671

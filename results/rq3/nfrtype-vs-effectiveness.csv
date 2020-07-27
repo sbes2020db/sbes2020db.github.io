@@ -1,0 +1,17 @@
+Internal Quality Attribute,NFR Type,Negative Refactorings,Neutral Refactorings,Positive Refactorings
+Complexity,Maintainability,8,9,16
+Complexity,Security,9,2,9
+Complexity,Performance,6,7,23
+Complexity,Robustness,11,8,21
+Cohesion,Maintainability,8,15,10
+Cohesion,Security,2,6,12
+Cohesion,Performance,8,14,14
+Cohesion,Robustness,7,17,16
+Coupling,Maintainability,13,8,12
+Coupling,Security,7,7,6
+Coupling,Performance,16,11,9
+Coupling,Robustness,10,15,15
+Size,Maintainability,12,5,16
+Size,Security,9,2,9
+Size,Performance,16,3,17
+Size,Robustness,15,3,22

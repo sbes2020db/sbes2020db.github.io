@@ -1,0 +1,40 @@
+Robustness,Old Classification,New Classification,,
+True Positives,23,26,,127
+True Negatives,67,65,,127
+False Positives,26,28,,
+False Negatives,11,8,,
+Precision,46.94%,48.15%,,
+Recall,67.65%,76.47%,,
+F1,55.42%,59.09%,,
+Accuracy,26.77%,26.77%,,
+,,,,
+,,,,
+Performance,Old Classification,New Classification,,
+True Positives,13,14,,117
+True Negatives,67,65,,117
+False Positives,26,28,,
+False Negatives,11,10,,
+Precision,33.33,33.33%,,
+Recall,54.17,58.33%,,
+F1,41.27,42.42%,,
+Accuracy,20.51,20.51%,,
+,,,,
+Maintainability,Old Classification,New Classification,,
+True Positives,23,24,,130
+True Negatives,67,65,,130
+False Positives,26,28,,
+False Negatives,14,13,,
+Precision,46.94%,46.15%,,
+Recall,62.16%,64.86%,,
+F1,53.49%,53.93%,,
+Accuracy,28.46%,28.46%,,
+,,,,
+Security,Old Classification,New Classification,,
+True Positives,12,12,,111
+True Negatives,67,65,,111
+False Positives,26,28,,
+False Negatives,6,6,,
+Precision,31.58%,30.00%,,
+Recall,66.67%,66.67%,,
+F1,42.86%,41.38%,,
+Accuracy,16.22%,16.22%,,

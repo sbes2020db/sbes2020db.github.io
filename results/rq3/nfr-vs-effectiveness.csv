@@ -1,0 +1,9 @@
+Internal Quality Attribute,Presence of NFR,Negative Refactorings,Neutral Refactorings,Positive Refactorings
+Complexity,Has NFR,28,25,51
+Complexity,No NFR,11,31,50
+Cohesion,Has NFR,15,51,38
+Cohesion,No NFR,4,61,27
+Coupling,Has NFR,34,34,36
+Coupling,No NFR,14,33,45
+Size,Has NFR,43,13,48
+Size,No NFR,24,20,48

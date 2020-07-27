@@ -1,0 +1,102 @@
+Finding 1,,,
+Complexity by Number.Of.Refactoring.Types,Kruskal-Wallis chi-squared = 11.165,df = 4,p-value = 0.0247
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = 1,group2 = 2,n = 3,p.adj = 0.360
+group1 = 1,group2 = 3,n = 3,p.adj = 0.0396
+group1 = 1,group2 = 4,n = 3,p.adj = 0.00296
+group1 = 1,group2 = 5+,n = 3,p.adj = 0.0222
+group1 = 2,group2 = 3,n = 3,p.adj = 0.253
+group1 = 2,group2 = 4,n = 3,p.adj = 0.0396
+group1 = 2,group2 = 5+,n = 3,p.adj = 0.170
+group1 = 3,group2 = 4,n = 3,p.adj = 0.360
+group1 = 3,group2 = 5+,n = 3,p.adj = 0.819
+group1 = 4,group2 = 5+,n = 3,p.adj = 0.493 
+,,,
+Cohesion by Number.Of.Refactoring.Types,Kruskal-Wallis chi-squared = 2.5462,df = 4,p-value = 0.6364
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = 1,group2 = 2,n = 3,p.adj = 0.784
+group1 = 1,group2 = 3,n = 3,p.adj =  0.293 
+group1 = 1,group2 = 4,n = 3,p.adj = 0.185
+group1 = 1,group2 = 5+,n = 3,p.adj = 0.315
+group1 = 2,group2 = 3,n = 3,p.adj = 0.437
+group1 = 2,group2 = 4,n = 3,p.adj = 0.293
+group1 = 2,group2 = 5+,n = 3,p.adj = 0.465
+group1 = 3,group2 = 4,n = 3,p.adj = 0.784
+group1 = 3,group2 = 5+,n = 3,p.adj = 0.964
+group1 = 4,group2 = 5+,n = 3,p.adj = 0.749
+,,,
+Coupling by Number.Of.Refactoring.Types,Kruskal-Wallis chi-squared = 12.033,df = 4,p-value = 0.01711
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = 1,group2 = 2,n = 3,p.adj = 0.411
+group1 = 1,group2 = 3,n = 3,p.adj = 0.0358
+group1 = 1,group2 = 4,n = 3,p.adj = 0.00191
+group1 = 1,group2 = 5+,n = 3,p.adj = 0.0285
+group1 = 2,group2 = 3,n = 3,p.adj = 0.201
+group1 = 2,group2 = 4,n = 3,p.adj = 0.0225
+group1 = 2,group2 = 5+,n = 3,p.adj = 0.171
+group1 = 3,group2 = 4,n = 3,p.adj = 0.315
+group1 = 3,group2 = 5+,n = 3,p.adj = 0.927
+group1 = 4,group2 = 5+,n = 3,p.adj = 0.361
+,,,
+Size by Number.Of.Refactoring.Types,Kruskal-Wallis chi-squared = 11.429,df = 4,p-value = 0.02215
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = 1,group2 = 2,n = 3,p.adj = 0.337 
+group1 = 1,group2 = 3,n = 3,p.adj = 0.0283
+group1 = 1,group2 = 4,n = 3,p.adj = 0.00189
+group1 = 1,group2 = 5+,n = 3,p.adj = 0.0495
+group1 = 2,group2 = 3,n = 3,p.adj = 0.217
+group1 = 2,group2 = 4,n = 3,p.adj = 0.0318
+group1 = 2,group2 = 5+,n = 3,p.adj = 0.315 
+group1 = 3,group2 = 4,n = 3,p.adj = 0.361
+group1 = 3,group2 = 5+,n = 3,p.adj = 0.819
+group1 = 4,group2 = 5+,n = 3,p.adj = 0.493 
+,,,
+,,,
+Finding 2,,,
+Number.Of.Refactorings by Presence.Of.SAR,Wilcoxon rank sum test,W = 0,p-value = 0.02857
+,,,
+Finding 3,,,
+Complexity by Presence.of.SAR,Wilcoxon rank sum test,W = 0,p-value = 0.1
+Cohesion by Presence.of.SAR,Wilcoxon rank sum test,W = 1,p-value = 0.2
+Coupling by Presence.of.SAR,Wilcoxon rank sum test,W = 0,p-value = 0.1
+Size by Presence.of.SAR,Wilcoxon rank sum test,W = 0,p-value = 0.1
+,,,
+Finding 4,,,
+Number.Of.Refactorings by Presence.Of.NFR,Wilcoxon rank sum test,W = 15,p-value = 0.6723
+,,,
+Finding 5,,,
+Complexity by NFR,Kruskal-Wallis chi-squared = 1.4484,df = 3,p-value = 0.6942
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = Maintainability ,group2 = Performance,n = 3,p.adj = 0.910
+group1 = Maintainability ,group2 = Robustness      ,n = 3,p.adj = 0.532
+group1 = Maintainability ,group2 = Security        ,n = 3,p.adj = 0.233
+group1 = Performance,group2 = Robustness      ,n = 3,p.adj = 0.609
+group1 = Performance,group2 = Security        ,n = 3,p.adj = 0.191
+group1 = Robustness      ,group2 = Security        ,n = 3,p.adj = 0.0691
+,,,
+Cohesion by NFR,Kruskal-Wallis chi-squared = 3.5505,df = 3,p-value = 0.3143
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = Maintainability ,group2 = Performance,n = 3,p.adj = 0.607
+group1 = Maintainability ,group2 = Robustness      ,n = 3,p.adj = 0.732 
+group1 = Maintainability ,group2 = Security        ,n = 3,p.adj = 0.458
+group1 = Performance,group2 = Robustness      ,n = 3,p.adj = 0.392
+group1 = Performance,group2 = Security        ,n = 3,p.adj = 0.819
+group1 = Robustness      ,group2 = Security        ,n = 3,p.adj = 0.278
+,,,
+Coupling by NFR,Kruskal-Wallis chi-squared = 6.7394,df = 3,p-value = 0.08068
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = Maintainability ,group2 = Performance,n = 3,p.adj = 0.733
+group1 = Maintainability ,group2 = Robustness      ,n = 3,p.adj =  0.495
+group1 = Maintainability ,group2 = Security        ,n = 3,p.adj = 0.0883
+group1 = Performance,group2 = Robustness      ,n = 3,p.adj =0.733 
+group1 = Performance,group2 = Security        ,n = 3,p.adj = 0.0408
+group1 = Robustness      ,group2 = Security        ,n = 3,p.adj = 0.0170
+,,,
+Size by NFR,Kruskal-Wallis chi-squared = 2.0342,df = 3,p-value = 0.5653
+Dunn's post hoc,"p.adjust.method = ""bonferroni""",,
+group1 = Maintainability ,group2 = Performance,n = 3,p.adj = 0.776
+group1 = Maintainability ,group2 = Robustness      ,n = 3,p.adj = 0.820
+group1 = Maintainability ,group2 = Security        ,n = 3,p.adj = 0.333
+group1 = Performance,group2 = Robustness      ,n = 3,p.adj = 0.955
+group1 = Performance,group2 = Security        ,n = 3,p.adj =  0.211
+group1 = Robustness      ,group2 = Security        ,n = 3,p.adj = 0.232
