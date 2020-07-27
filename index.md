@@ -2,6 +2,28 @@
 title: On the Relation between Complexity, Explicitness, Effectiveness of Refactorings and Non-Functional Concerns
 ---
 
+## NEW: Rebuttal-related files
+
+### Statistical Analysis:
+
+The statistical analysis can be found at: https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/statistical%20analysis
+
+### Quantitative Results:
+
+The quantitative results of this work can be found at: https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/results
+
+They are split between RQ1, RQ2 and RQ3. The folder "summarized results" contains the full result set (and not only the frequency values)
+
+### Analysis of Refactoring Types:
+
+As mentioned in the Rebuttal, we attempted to analyze the difference between SAR/non-SAR commits for the top 3 refactoring types. These are: Extract Method, Extract Variable and Rename Variable. Out of these, Rename Variable did not have enough data for the analysis. Thus, we settled on analyzing Extract Method and Extract Variable.
+
+The results of this analysis can be found at: https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/results-reftypes
+
+### New Keywords Validation:
+
+The results of the validation for the new keyword set proposed by the reviewers of this work, displaying the split between TP/FP/TN/FN, as well as accuracy and recall, can be found at: https://github.com/sbes2020refactoring/sbes2020refactoring.github.io/tree/master/new%20validation
+
 ## Used Internal Quality Attribute Metrics
 
 | Metric Name | Internal Quality Attribute | Metric Description |
